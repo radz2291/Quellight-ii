@@ -1,25 +1,21 @@
-# Quellight II — current project state
+# Quellight — current project state
 
-**2026-10-25 — Cycle 0 accepted and merged; Cycle 1 ticket prepared, NOT STARTED.** The owner accepted `II-001` in Rolladice Work (status `done`), and [PR #1](https://github.com/radz2291/Quellight-ii/pull/1) was merged to `main` at `16e9f187c72a441aa1be30a466514b9f0d43ebe4`. This later documentation-only preparation sets up `II-002` with pinned standard revision 2 and [HANDOFF](HANDOFF.md). There is **no implemented Quellight II application** yet, no historical import, and no new hosted Supabase project. The owner must explicitly launch Codex on `II-002` before Cycle 1 implementation begins.
+**2026-10-25 — II-002 Cycle 1 independently PASS at local synthetic functional scope; owner review required.** No owner acceptance, merge, Cycle 2, hosted-resource or real-inference authority. [HANDOFF](HANDOFF.md) remains the bounded authority. Product/project display name is Quellight; stable repository/ticket identifiers remain references.
 
-## Delivered and accepted — Cycle 0 / II-001
+## Verified delivery
 
-- Read-only structural inventory of owner-authorized ARA-Light history: **203 sessions / 11,475 entries**, mixed roles/parts/timestamps and **25 attachment entries**; no raw transcript import. Source facts were builder-observed; independent verifier did not requery private database.
-- [Owner report](cycle-0/REPORT.md), [typed contracts](cycle-0/CONTRACTS.md), [source audit](cycle-0/SOURCE-AUDIT.md), [technology/probes](cycle-0/TECHNOLOGY.md), [import/operations plan](cycle-0/IMPORT-AND-OPERATIONS.md), [evolution tests](cycle-0/EVOLUTION-AND-TEST-PLAN.md), and [original Cycle 1 proposal](cycle-0/CYCLE-1-PROPOSAL.md).
-- Original research candidate `34acfcc04152ed5570d1e7449e1df648226b1ea6` HELD; repaired candidate `0a1c0aa71688cd52680cb8498f0cf7ab377f7d70` independently **PASS** at research scope, supported by [verifier report](cycle-0/VERIFICATION-02.md). Verifier evidence `0d7b1328f94eb50deecc87c6efe74a137f9332d5`; delivery `6672e646e869fbdb5f098d9c0395b0d6ddd3a701`, accepted/merged via PR #1. Four synthetic API probe groups and 28 documentation/link checks passed.
-- **NOT DEMONSTRATED:** production memory quality, durable execution at app level, recovery across real workers, real DB RLS/HTTP isolation, UI/streaming behavior, verified historical import/attachment recovery, privacy of exported traces, full backup restore.
-- A legacy database access-control exception remains recorded **privately** in Work; no source mutation/remediation performed. Staging replacement/new project is a separately gated capacity/backup/approval decision, not authorized by owner acceptance of Cycle 0.
+- Branch codex/c1-core-vertical; exact baseline a8c40fe74163b3273f603cab93453d86fb54bd1d. Original498b9ea27dbd3f8c2bf4a8f04f92de9925a7fd89 independently [HELD](cycle-1/VERIFICATION-01.md) for delayed pending save crossing an owner switch. Failure/probe retained.
+- Repaired exact candidate **86b49fd9d43a95a50448568afded57fb5ef51992** independently [PASS](cycle-1/VERIFICATION-02.md); verifier-evidence commit **fd6cf1aba4e596e559ee640217e89a8cdf20b5ce**. Later closure is documentation/evidence only. Final delivery SHA and remote proof are pinned in [draft PR #2](https://github.com/radz2291/Quellight-ii/pull/2) and private Work II-002.
+- [Selected stack](cycle-1/UI-STACK.md): Next.js/React/assistant-ui. Companion-first default; Your space is secondary save/source/history/JSON/run inspection. Original native fixture preserved. [Setup](cycle-1/SETUP.md) and [owner report](cycle-1/REPORT.md).
+- Real local SCRAM owner auth/RLS, five generic primitives, atomic sources/records/revisions/receipts/events, separate queue/worker, generation/lease fencing, cancellation/failure/retry and deduplicated effects across before/after-effect process kills. Real Mastra two-turn fake-model loop; no claim that its beta durable wrapper is proved.
+- Seed v2 definition/skill reference/dynamic UI, v1 compatibility, safe migration/rollback. Independent clean install, eight integration groups, seven reviewer groups, checkJs/strict Next TS/TSX, production build, selected browser10 and native8 all PASS. Original F1 fenced; default/secondary visibility and stop/error tested. [Repairs](cycle-1/REPAIRS-01.md).
 
-## Current Work / gates
+## Accepted history and boundaries
 
-| Item | Status | Authority/evidence |
-| --- | --- | --- |
-| `II-001` Cycle 0 | **DONE; owner accepted** | Work ticket; [merged PR](https://github.com/radz2291/Quellight-ii/pull/1), exact lineage above |
-| `II-002` Cycle 1 | **PREPARED; execution NOT STARTED** | Work ticket with standard rev 2, depends on done `II-001`; [HANDOFF](HANDOFF.md) |
-| Local runnable app, permissions, worker durability | **NOT BUILT / NOT DEMONSTRATED** | Next stage acceptance [C1-01…C1-12](09-ACCEPTANCE.md) |
-| Live/new Supabase account, staging retirement, legacy fixes | **NOT AUTHORIZED / NOT PERFORMED** | Need separate verification and explicit owner approval |
-| Cycle 2+ memory/Companion/Steward expansion | **NOT STARTED** | [Stages](08-STAGES.md) roadmap only |
+II-001 is owner-accepted/done; PR #1 merged at16e9f187c72a441aa1be30a466514b9f0d43ebe4. Immutable [C0 report](cycle-0/REPORT.md) retains research evidence and earlier failed lineage. C0 source inventory is not C1 live source access or import evidence.
 
-## Next action
+No C1 source/Supabase connector query, legacy mutation/remediation, staging retirement, hosted provisioning, personal import, paid inference or deployment. [Hosted checklist](cycle-1/HOSTED-RESOURCE-GATE.md) explicitly retains unresolved live identity/entitlement/disposition/backup/independent restore/cost/region/approval gates. Full conversation persistence, semantic memory/JIT retrieval, actual provider behavior/quality/cost, production auth/TLS, distributed operations and V1 readiness remain NOT DEMONSTRATED. Minor limits: nested-clone build warning and short-lived notice overlap.
 
-Radzi may **launch Codex manually on `II-002`** after reading the new ticket and [Cycle 1 handoff](HANDOFF.md); only that launch starts the local synthetic-data core work. The Codex stage manager must claim the Work task, preserve boundaries, complete independent verification, update all checkboxes/outputs/run/discussion, and stop in `review` for Radzi. No additional cycles, live provisioning/import, paid usage, staging deletion, legacy remediation or deployment are preauthorized.
+## Review boundary
+
+Complete mandatory Work criterion/summary/output/discussion/run/Review synchronization and persistence re-read before the final delivery response. Only Radzi accepts; no automatic merge or next cycle. The independently verified implementation is ready for that owner review, with exact final Git delivery/Work persistence evidence recorded externally after closure documentation is committed.

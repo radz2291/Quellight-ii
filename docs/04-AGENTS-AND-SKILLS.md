@@ -58,6 +58,8 @@ The Companion resolves the relative date, searches topic + time + source, retrie
 
 ## Safe background execution
 
+For the bounded local Cycle 1 proof, the separate worker uses a Mastra Agent inside app-owned queue/lease/checkpoint/effect transactions; see [runtime contract](cycle-1/IMPLEMENTATION.md). This demonstrates the recoverable application effect boundary while leaving the beta durable-agent wrapper and model-driven JIT skill loading unproved. The seed skill is a versioned extension artifact and inspection reference, not an authority mechanism.
+
 Queue message ≠ completed one-turn task. A separate durable Mastra worker must own repeated model/tool interactions, checkpoints and recovery. Foreground confirmations must not wait for optional background enrichment, but explicit “saved” acknowledgements require completed persistence. Avoid duplicate jobs/records via idempotency keys and ownership/version checks.
 
 See [Architecture](02-ARCHITECTURE.md), [Trust & inspection](05-TRUST-AND-INSPECTION.md), and [Evolution](06-EVOLUTION.md).

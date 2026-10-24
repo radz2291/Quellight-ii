@@ -1,8 +1,8 @@
-# Quellight II
+# Quellight
 
 An independent, memory-centered personal AI companion. Quellight should know its person over time, hold meaningful conversations, help with everyday commitments and practices, and remain inspectable and correctable by its owner.
 
-Current delivery and verification status live only in [STATE](docs/STATE.md). This repository contains product specifications and bounded research evidence; a research probe is not an application implementation. Current execution authority lives only in [HANDOFF](docs/HANDOFF.md).
+Current delivery and verification status live only in [STATE](docs/STATE.md). This repository contains product specifications, bounded research evidence and a local synthetic vertical proof. Current execution authority lives only in [HANDOFF](docs/HANDOFF.md).
 
 ## Start here
 
@@ -29,9 +29,9 @@ The previous Quellight conversations are reported to live in an existing Supabas
 
 ## Current delivery
 
-The first deliverable is a verified foundation and a read-only source assessment. Future development cycles must produce runnable behavior and independent evidence. Read [HANDOFF](docs/HANDOFF.md) for the presently authorized work; do not interpret the long-term roadmap as blanket authorization.
+The [local setup](docs/cycle-1/SETUP.md) runs the Companion shell, source-linked generic records and separate Steward proof. [Implementation boundaries](docs/cycle-1/IMPLEMENTATION.md) distinguish the synthetic proof from V1 memory and hosted Supabase. Read [HANDOFF](docs/HANDOFF.md) for presently authorized work; the roadmap does not authorize later cycles.
 
 ## Persistent development coordination
 
-The private **Rolladice Work** project `Quellight II` tracks Codex delegation, pinned standards, discussions, execution evidence and human review across sessions. The first AI ticket is **`II-001` — Cycle 0 read-only discovery**. Codex should check Work at session start, use its source-linked handoff and report through the ticket. Ticket creation does not launch a coding agent or grant new authority; see [Work protocol](docs/11-ROLLADICE-WORK.md). Numbered `docs/01-…` through `docs/11-…` files are ordered, stable design references; unnumbered `docs/STATE.md` and `docs/HANDOFF.md` remain the live operational entry points.
+The private **Rolladice Work** project `Quellight` tracks Codex delegation, pinned standards, discussions, execution evidence and human review across sessions. The first AI ticket is **`II-001` — Cycle 0 read-only discovery**. Codex should check Work at session start, use its source-linked handoff and report through the ticket. Ticket creation does not launch a coding agent or grant new authority; see [Work protocol](docs/11-ROLLADICE-WORK.md). Numbered `docs/01-…` through `docs/11-…` files are ordered, stable design references; unnumbered `docs/STATE.md` and `docs/HANDOFF.md` remain the live operational entry points.
 
