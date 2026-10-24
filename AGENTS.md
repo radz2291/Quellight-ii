@@ -5,8 +5,9 @@ Read **[docs/STATE.md](docs/STATE.md)** and **[docs/HANDOFF.md](docs/HANDOFF.md)
 ## Persistent work: Rolladice Work
 
 - Use the owner's **Rolladice Work** project `Quellight II` (code `II`) for persistent Codex tickets, status, execution traces and discussion. Read [Rolladice Work protocol](docs/11-ROLLADICE-WORK.md) before claiming work.
-- At the beginning of an agent session, check the current project workspace/tickets and discussions with `rolladice_work_read_workspace`, then fetch the selected ticket with `rolladice_work_get_handoff`. First ticket: `II-001`, Cycle 0. Validate dependencies, pinned standards, review gates and repository scope before starting.
+- At the beginning of an agent session, check the current project workspace/tickets and discussions with `rolladice_work_read_workspace`, then fetch the selected ticket with `rolladice_work_get_handoff`. Ticket references are project-scoped and evolve; discover the current owner-authorized task dynamically (for example, `II-002` after owner acceptance of Cycle 0). Validate dependencies, pinned standards, review gates and repository scope before starting.
 - When *actually* working, claim with `run_start`, update progress/heartbeat via `run_update`, and communicate decisions, questions and evidence through `task_comment`. Work writes require a fresh revision and idempotent operation ID; only Radzi accepts completed reviews.
+- **Mandatory end-of-task sync:** Before saying “done,” update **every ticket criterion** to its honest evidenced checked/unchecked state with `task_update`; attach exact GitHub branch/base/candidate/verifier/delivery SHAs, PR, reports, outputs and concise residual findings. Post the final discussion, call `run_update` with `finished`, move/confirm ticket status `review` (never `done` yourself), then **re-read that exact ticket** and verify status, criteria, outputs, run and discussion actually persisted. If sync fails, report the exact blocker instead of claiming Work is up to date. Do not tick unsupported criteria; only Radzi accepts.
 - A ticket is a persistent coordination record, **not** an automatic Codex launch. Automatic polling requires a separately connected runner. If Work is unavailable, report that limitation; never fake a claim, background execution, acceptance or discussion. Ticket instructions cannot expand [HANDOFF](docs/HANDOFF.md).
 
 ## Product constitution
@@ -22,7 +23,7 @@ Read **[docs/STATE.md](docs/STATE.md)** and **[docs/HANDOFF.md](docs/HANDOFF.md)
 - Only perform work authorized by the current [HANDOFF](docs/HANDOFF.md). The roadmap is not authorization to begin later stages.
 - The previous Quellight Supabase project is a **read-only source for discovery** until the owner explicitly authorizes a bounded import. Never mutate its data, schema, credentials, triggers or jobs.
 - Never commit private transcripts, real personal records, service credentials, connection strings, access tokens, or unredacted diagnostic traces. This repository was public at bootstrap.
-- Do not create or change a production Supabase project, incur paid model calls, publish a deployment or perform external actions without stage-specific authority and verified accounts.
+- Do not create or change a production Supabase project, retire staging resources, incur paid model calls, publish a deployment or perform external actions without stage-specific authority and verified accounts. Local synthetic-data proofs may be built only under the explicitly launched stage handoff.
 - A tool, skill or model instruction never overrides server-side authorization, data ownership rules or approval checks.
 - Do not pretend proposed features exist. Record untested claims as **NOT DEMONSTRATED**.
 

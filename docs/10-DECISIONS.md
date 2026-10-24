@@ -51,3 +51,11 @@ Future changes must record owner authority, superseded decision, affected contra
 
 Historical "Facts not yet established" above is preserved as bootstrap context. Cycle 0 establishes source project identity and structural owner-scoped counts/dates only; destination auth mapping, attachment recovery, exact budget/hosting and production behavior remain unestablished. Current verdict and next allowed action are only in [STATE](STATE.md).
 
+
+## Owner acceptance and next-ticket preparation — 2026-10-25
+
+| ID | Decision / amendment | Basis / boundary | Authority and status |
+| --- | --- | --- | --- |
+| D-021 | Accept `II-001` Cycle 0 documentation/read-only discovery and independent PASS; merge accepted [PR #1](https://github.com/radz2291/Quellight-ii/pull/1) to main | Owner explicitly said “I accept the work, the review accepted.” Work ticket status is `done`, merge commit `16e9f187c72a441aa1be30a466514b9f0d43ebe4`; no app/runtime/security/import proof is implied | **Owner accepted** 2026-10-25; Cycle 0 closed |
+| D-022 | Prepare `II-002` Cycle 1 local core proof and require agents to synchronize all ticket criteria, evidence, discussion, run and review state before announcing completion | Owner requested next ticket and AGENTS.md update. [Current handoff](HANDOFF.md) limits work to local synthetic proof on explicit Codex launch; legacy/source security remediation, staging retirement, provisioning, imports, paid inference and deployment remain separately gated | **Owner-directed preparation** 2026-10-25; execution not started |
+

@@ -1,6 +1,6 @@
 # 09 — Acceptance scenarios and evidence standard
 
-**Status:** V1 quality contracts; not executed. The implementation stage that proves each scenario is listed for planning, not assumed complete. Use synthetic multi-user fixtures in the repository; personal historical evaluation data remains private.
+**Status:** Cycle 0 research/documentation criteria are owner-accepted; V1 product-level behavior remains NOT DEMONSTRATED. The implementation stage that proves each scenario is listed for planning, not assumed complete. Use synthetic multi-user fixtures in the repository; personal historical evaluation data remains private.
 
 | ID | Stage target | User-visible scenario | Negative or failure check |
 | --- | --- | --- | --- |
@@ -34,6 +34,23 @@
 - **C0-05:** Give a new-project provisioning and import plan with permissions, data segregation, backups/restore and rollback boundaries; do not provision or import.
 - **C0-06:** Run the first architecture evolution thought experiment (new personal domain) and show how few contracts actually change; identify any counterexamples honestly.
 - **C0-07:** Update foundation documents consistently, enumerate all outstanding implementation risks and prepare a bounded Cycle 1 candidate handoff **without self-authorizing Cycle 1**.
+
+## Cycle 1 acceptance — local functional proof (II-002)
+
+The checks below are a **local synthetic-data** gate, not historical import, production readiness or permission to spend money. Every criterion requires direct source-linked evidence and fresh independent challenge; do not check it merely because a feature is planned.
+
+- **C1-01 — Baseline and authority:** Verify accepted Cycle 0 merge, exact Cycle 1 baseline, current Work assignment/dependency/standard, package compatibility and full stage exclusions before implementation.
+- **C1-02 — Recovery spike:** Reproduce fake-model multi-turn/streaming and local persistent effect with kill/restart, duplicates, cancellation and lease fencing; honest fallback/HELD for unsupported runtime behavior. No paid inference.
+- **C1-03 — Auth and RLS:** Run the local app with two **synthetic authenticated owners** and independently test real database row-level read/write/subscribe permissions. A fake-only auth gate cannot PASS.
+- **C1-04 — Durable model:** Deliver versioned schemas for sources, records, revisions, operations/effects, runs, receipts and outbox with tested migration/rollback and owner-bound keys.
+- **C1-05 — Generic primitives:** Implement `discover/create/query/update/history` server-authorized operations, constrained parameters, idempotency/conflict guards and source provenance; deny model-origin SQL or admin access.
+- **C1-06 — Foreground path:** Create and later reload a source-linked note/task in the UI and through API after process restart; inspect source, revision and changes; never acknowledge uncommitted writes as saved.
+- **C1-07 — Background path:** Demonstrate non-blocking, separately dispatched and recoverable Steward execution with truthful queue/run/failure states and no duplicate committed effect after retry.
+- **C1-08 — Evolution:** Add an unforeseen seed-domain definition/skill through a bounded extension and version-2 compatibility/rollback exercise without breaking existing note/task behavior; document required core changes honestly.
+- **C1-09 — Negative security/recovery:** Fresh verifier tests read/write/subscribe isolation, IDOR, forged identity, stale leases, races, cancelling/stalled runs, privacy sentinels and restart/duplicate delivery on deterministic fixtures.
+- **C1-10 — Hosted-resource gate:** Prepare verified staging/destination account, backup/restore, cost/region, retention/rollback checklist. **No** legacy mutation/remediation, staging deletion, hosted provisioning, import, payment or deploy without separate approval.
+- **C1-11 — Independent evidence:** Reproducible commands, lockfile, local setup, build/typecheck, browser + direct DB/API checks, exact candidate SHA, independent verdict, preserved failed findings, repaired and reverified successor, PR and owner report.
+- **C1-12 — Persistent ticket closure:** Before saying “done,” reconcile all Work checkboxes to evidence, attach SHA/PR/report/outputs, finish run, post final discussion, ensure `review`, then re-read exact ticket and confirm updates. Only Radzi accepts as `done`.
 
 ## Verification contract
 

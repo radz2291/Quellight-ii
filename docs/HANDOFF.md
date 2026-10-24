@@ -1,57 +1,38 @@
-# Current Codex handoff — Cycle 0, read-only foundation and historical discovery
+# Current Codex handoff — II-002 / Cycle 1 core vertical proof
 
-**Authority:** The owner requested the new `https://github.com/radz2291/Quellight-ii` repository be prepared for Codex, previously authorized a read-only assessment of prior Quellight conversations in Supabase, and requested persistent delegation through Rolladice Work. This document authorizes **Cycle 0 only**; later [STAGES](08-STAGES.md) are a roadmap, not automatically authorized execution. Persistent coordination is through Work project `Quellight II` / ticket **`II-001`**, pinned to execution standard revision 1. Resolve private API IDs from the live workspace. The ticket does not expand this authorization.
+**Status (2026-10-25): PREPARED; NOT STARTED.** Radzi explicitly accepted Cycle 0 and asked for the next ticket and a stronger ticket-closeout discipline. This prepares the bounded Cycle 1 handoff; it does **not** launch Codex. **Cycle 1 implementation begins only when Radzi explicitly starts Codex on II-002.** Creating/marking a Work ticket ready is not automatic execution, new credentials, external account authority or blanket V1 authorization. Prior [Cycle 0 owner report](cycle-0/REPORT.md) remains immutable research evidence.
 
-**Repository:** `radz2291/Quellight-ii` / default `main`. **Baseline:** fetch latest `origin/main` and pin its **exact full SHA in the Cycle 0 evidence before any change**. The remote was initially empty during foundation preparation; do not assume a stale SHA. **Branch:** create an isolated stage branch (suggestion: `codex/c0-foundation-discovery`), preserve main, and open a reviewable handoff without merging unapproved changes.
+**Repository:** `radz2291/Quellight-ii`, default `main`. Accepted Cycle 0 PR #1 merged at `16e9f187c72a441aa1be30a466514b9f0d43ebe4`; the preparation commit following that merge contains this handoff. At launch, fetch latest `origin/main`, verify its **full SHA** matches the prepared handoff branch history, and record the exact working baseline in Work before editing. Use a dedicated `codex/c1-core-vertical` branch and push a PR for owner review; no self-merge.
 
-## You are the accountable Cycle 0 stage manager
+**Persistent task:** private Rolladice Work project `Quellight II` / **`II-002`**, pinned execution standard revision **2**; dependency `II-001` is owner-accepted and done. Discover its private UUID via project-scoped read, then use its live handoff and criteria. Source-of-truth for stage limits is this document; Work stores the assignment, criteria, discussions and execution.
 
-Own the whole accepted Cycle 0 outcome: investigate, document, integrate bounded repairs, independently challenge the candidate, and hand off a verified report. You may coordinate non-overlapping research/verification agents where available, but delegation grants no new permissions. Avoid involving the owner in routine repairs. If delegation is unavailable, use truly separate review/check sessions and report the independent-verification limit.
+## Mission: one working, changeable slice
 
-## Read first
+You are the single accountable Cycle 1 stage manager from initial baseline through implementation, independent challenge, bounded repairs, retest, evidence and owner review. The outcome is a **runnable local** Quellight II proof: two synthetic, authenticated owners; a source-linked note/task created by generic validated primitives; a truthful minimal Companion surface; and a separate inspectable Steward worker whose effect is durable across duplicate delivery and process restart.
 
-1. Root [AGENTS.md](../AGENTS.md), [STATE](STATE.md), this [HANDOFF](HANDOFF.md).
-2. [Rolladice Work protocol](11-ROLLADICE-WORK.md). Read the live ticket `II-001`, pinned standard, dependencies, existing discussion and handoff; only then claim actual work.
-3. [Product](01-PRODUCT.md), [Architecture](02-ARCHITECTURE.md), [Memory & data](03-MEMORY-AND-DATA.md), [Agents & skills](04-AGENTS-AND-SKILLS.md).
-4. [Trust & inspection](05-TRUST-AND-INSPECTION.md), [Evolution](06-EVOLUTION.md), [Legacy import](07-LEGACY-IMPORT.md), [Acceptance](09-ACCEPTANCE.md), [Decisions](10-DECISIONS.md).
+Cycle 0 [typed contracts](cycle-0/CONTRACTS.md), [technology evidence](cycle-0/TECHNOLOGY.md), [evolution tests](cycle-0/EVOLUTION-AND-TEST-PLAN.md), [implementation proposal](cycle-0/CYCLE-1-PROPOSAL.md) and [stage criteria](09-ACCEPTANCE.md) are starting evidence, **not pre-implemented product**. Preserve versioned, replaceable adapters for model, memory/search, auth, database, worker runtime and UI, with no code path bypassing server-side authorization.
 
-## Authorized work
+## Execution order and accepted local scope (on explicit Codex launch only)
 
-- Verify repository identity, branch/HEAD, clean baseline, tool permissions, and every claimed foundation doc/reference.
-- Using **only already-authorized read-only source access**, inventory previous Supabase Quellight schema, permitted conversation scope, counts, role/date coverage and attachment/reference realities. Use aggregate/redacted evidence only. If no permitted access exists, document the exact blocker and do not find alternate unauthorized routes.
-- Check current first-party Mastra/Supabase docs and perform isolated **non-destructive, no-paid-inference** feasibility experiments where useful. Validate multi-turn durable agent recovery, memory scope, JIT skill loading, queue/worker separation, auth/RLS and inspectable run traces.
-- Propose concrete first-pass record/event/link/source/revision and tool contracts, validation, schema evolution, data ownership, concurrency/idempotency and scheduling strategy.
-- Propose destination project provisioning, a selective importer, backup/restore, retention, resource use and cost boundaries; no actual provision or import yet.
-- Perform an unanticipated-domain extensibility challenge; include a counterexample if core changes would be necessary.
-- Correct and extend docs based on evidence while preserving owner decisions. Prepare a bounded future Cycle 1 handoff as **proposal only**.
+1. Reconstruct `main`/Work/source links and establish a clean pinned baseline. Verify currently published primary documentation and versions, including Supabase security/changelog guidance, before dependency choice. Record which functions remain experimental; do not assume a successful constructor proves durable recovery.
+2. Use a deterministic, fake-model recovery spike with isolated local fixtures **first**. Verify multi-turn streaming, process-kill/restart, duplicate dispatch, cancellation, lease-generation fencing and one committed effect. If chosen Mastra facility cannot pass the gate, evaluate a replaceable durable worker behind the same app-owned contract; stop for owner choice if the architecture materially changes.
+3. Build a thin local app shell + server-validated session/owner identity with two synthetic owners. Use a disposable local Postgres/Supabase-compatible environment if available; implement and test **real database permission/RLS boundaries**. Mock-only authorization may support UI development but cannot satisfy C1.
+4. Implement just the source, record, revision, event/operation, worker run/outbox/receipt tables and versioned migrations necessary for one source-linked note/task. Expose narrow schema-discovered, server-authorized `discover`, `create`, `query`, `update`, `history` primitives; enforce owner/resource/version/idempotency on the server, never model-generated SQL or privileged credentials in clients.
+5. Wire one foreground create/query/restart path, minimal source/history Inspection view and an asynchronous queue-to-worker flow with honest queued/running/stalled/failed/finished statuses. Persist before acknowledging success. Keep conversations non-blocking.
+6. Add one unexpected seed-domain extension using a definition/skill/versioned migration, retaining existing note/task behavior. Probe migration rollback and changed-record compatibility.
+7. Integrate an exact candidate commit and have a fresh-context independent verifier challenge authentication, read/write/subscribe isolation, spoofing/IDOR, idempotency/races, lease expiration, cancel/restart, trace privacy and the evolvability claim. Preserve failed audits, repair within scope, and rerun affected checks. Complete documented reproducible install/build/browser/API evidence.
+8. **Before saying done, synchronize II-002** following [Work protocol](11-ROLLADICE-WORK.md): check each fulfilled criterion with evidence, leave unproven unchecked, attach full SHA lineage/PR/report/outputs, final discussion and finished run, transition to `review`, then re-fetch task and confirm updates. If Work write fails, disclose precise unsynced items. Stop for owner acceptance; no Cycle 2 execution.
 
-## Explicit exclusions and stop conditions
+## Hard boundaries and risks
 
-- **Never mutate** the old Supabase project or run schemas/triggers/jobs on it. No “helpful cleanup,” migration, deletion or actual transcript copying into GitHub.
-- Do not provision the new Supabase project, connect payment methods, install production secrets, perform paid model/API calls, build the production application or deploy anything in Cycle 0.
-- Do not merge to main or start Cycle 1 without explicit owner acceptance and authority.
-- Stop with **BLOCKED** for missing data rights/access, protected workflows, private information leakage risk, required external approvals or missing critical credentials. Stop with **HELD** for unresolved material product decisions. Never invent schema facts.
+- **Old ARA-Light conversation source stays read-only.** Do not fetch/commit private messages, remove or alter legacy data, change legacy RLS/grants, replay legacy tool runs or import history in Cycle 1. A reported legacy security exception remains a **separate private owner-authorized remediation**; do not claim it fixed or test exploitation. 
+- **Staging replacement and new Supabase project remain gated.** Before any actual staging retirement/new hosted project, obtain exact target identification, owner approval for that specific change, backup and independently demonstrated restore, disposition/retention proof, verified account capacity/cost/region, credential isolation and rollback. This handoff authorizes a **plan and local proof only**; it does not authorize deletion, new external project, live migration or charges. If local Postgres/RLS prerequisites are unavailable, report HELD/BLOCKED with evidence rather than bypassing controls.
+- No paid model inference, production deployment, outbound integrations, real personal import, speculative “memory intelligence”, autonomous external action or account management.
+- Do not write secrets, private identity tuples, actual transcripts or raw model traces into the **public** repository, Work discussions or PR comments. Use synthetic test users and sentinel values.
+- Do not silently weaken minimum durable-run, isolation, source-provenance or evolvability requirements. Pause for real permission gaps, protected workflows, access rights, cost choices, destructive actions, or a material architecture fork. Continue ordinary bounded repairs autonomously.
 
-## Required deliverables and final gate
+## C1 gate and delivery
 
-- Source audit report in a new `docs/cycle-0/` directory (only redacted structural evidence; no private sample messages).
-- Verified architecture/technology feasibility and alternatives with direct primary sources.
-- Proposed typed data and primitive tool contracts; explicit remaining unknowns.
-- User test and failure/recovery plan including memory accuracy, dates, no duplicated writes, security and domain-change drill.
-- Updated [STATE](STATE.md), [DECISIONS](10-DECISIONS.md), affected docs, and candidate/evidence lineage.
-- One final owner report: exact branch/base/candidate/verifier SHA, pass criteria C0-01…C0-07, PASS/FAIL/NOT DEMONSTRATED for each, independent verdict, findings and next *proposed* action.
-- Update Work ticket `II-001`: claim and heartbeat during real activity, discuss blockers/important alternatives and post source-linked branch/PR/evidence/final report for **human review**. Work is the durable coordination record, not a substitute for GitHub verification or owner acceptance.
+Complete the **C1-01 to C1-12** evidence checklist in [Acceptance](09-ACCEPTANCE.md) and the pinned Work ticket. Preserve independent tester command lines, fixtures, exact tested candidate and verifier SHA, failed attempts, repairs, deviations and **NOT DEMONSTRATED** areas. Demonstrate the minimal app in a browser and via direct API/database probes; show reloaded source/history and single committed effect after duplicate dispatch/process restart. A stage manager's self-report is not independent verification.
 
-## Verification loop
-
-1. Read the live Work handoff and claim ticket `II-001` only when beginning actual Cycle 0 work; implement the documentation/research candidate on the scoped branch and commit it.
-2. Have a fresh independent verifier challenge exact claims/commit; verifier records failures and does not silently repair the audited candidate.
-3. Repair in-scope issues, create a new candidate and rerun affected checks. Preserve red evidence and previous candidates.
-4. Push authorized stage branch only; update Work discussion/run status with the exact tested evidence and submit for owner review. Only Radzi accepts the ticket and the stage. Stop at Cycle 0.
-
-The user's priority order is **memory quality, truthful continuity, change-tolerant architecture and inspectable autonomy**, ahead of a large feature count.
-
-## Owner scope clarification during II-001 — 2026-10-24
-
-Owner confirmed ARA-Light as the previous Quellight source. Owner requested staging replacement to free account capacity, then explicitly clarified **"Prepare replacement for next cycle"**. This adds retirement/provisioning planning to the future-stage proposal only; no deletion/provisioning now. ARA-Light remains read-only and excluded from retirement. Record account/cost/backup/disposition unknowns in the proposal. Cycle 0 and its review boundary remain unchanged.
-
+Final artifact: scoped branch and PR (not merged), reproducible setup (no secrets), source-linked report, screenshots as appropriate, updated [STATE](STATE.md) within that branch, Work `II-002` in **Review**, and a concise owner report. **Radzi alone accepts.** 
