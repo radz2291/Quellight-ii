@@ -1,6 +1,6 @@
 # Quellight II — current project state
 
-**2026-10-24 — FOUNDATION BOOTSTRAP IN PROGRESS / documentation-only.** Repository `radz2291/Quellight-ii`, default branch `main`, was verified empty at initial inspection; this pack is the first product foundation. No application implementation, previous Supabase inspection, history import, runtime verification, independent product audit, or stage completion has occurred. Exact current Git HEAD must be verified from GitHub by the next agent; do not assume a hash from prose. The next proposed and bounded action is **Cycle 0 read-only discovery** under [HANDOFF](HANDOFF.md). Any external access limitation must be reported, not bypassed.
+**2026-10-24 — FOUNDATION PUBLISHED / documentation-only.** Repository `radz2291/Quellight-ii`, default branch `main`, was verified empty before bootstrap. The 17-file foundation was published and its GitHub tree independently checked at foundation commit `3275246b500fc95bb23441b7b077fea7440bf868` (17 files plus 2 directories). The local foundation-check script passed. This recorded SHA is the foundation-content baseline; later status-record commits may advance `main`, so the next agent must resolve its exact current HEAD from GitHub. No application implementation, previous Supabase inspection, history import, runtime verification, independent product audit, or stage completion has occurred. The next authorized action is **Cycle 0 read-only discovery** under [HANDOFF](HANDOFF.md). Any external access limitation must be reported, not bypassed.
 
 ## Actual delivery so far
 
@@ -13,7 +13,7 @@
 
 | Gate | Status | Evidence |
 | --- | --- | --- |
-| Foundation documentation authored | Candidate; GitHub upload/review pending | Repository files |
+| Foundation documentation authored and published | PUBLISHED; local structural check PASS; independent product audit not claimed | Foundation commit `3275246b500fc95bb23441b7b077fea7440bf868`; GitHub tree verified |
 | Cycle 0 historical source inventory | NOT STARTED | None |
 | Cycle 0 package/runtime feasibility | NOT STARTED | None |
 | Cycle 0 independent exit verification | NOT DEMONSTRATED | None |
@@ -27,5 +27,5 @@
 
 ## Update protocol
 
-After the foundation is committed and verified, update this page with the exact repository/commit evidence and change the bootstrap claim to the observed result. After each later stage record candidate/verifier SHAs, tests, findings, verdict, remaining risk and next authorized action. Do not claim a stage PASS from preparation documents or a builder report alone.
+After each later stage record candidate/verifier SHAs, tests, findings, verdict, remaining risk and next authorized action. Do not claim a stage PASS from preparation documents or a builder report alone.
 
