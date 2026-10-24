@@ -42,7 +42,7 @@ Useful official starting references: [Mastra memory](https://mastra.ai/docs/memo
 
 ## Shared invariants
 
-Cycle 1's [implemented local boundaries](cycle-1/IMPLEMENTATION.md) retain these responsibilities with PostgreSQL role/RLS auth, a selected Next.js/assistant-ui shell and an app-owned transactional worker around real Mastra Agent turns. Hosted Supabase, chat-framework selection, beta durable-agent engine and production providers remain unproved. The proof's stream is deliberately synthetic; it does not implement V1 conversational memory.
+Cycle 1's [implemented local boundaries](cycle-1/IMPLEMENTATION.md) retain these responsibilities with PostgreSQL role/RLS auth, a selected Next.js/assistant-ui shell and an app-owned transactional worker around real Mastra Agent turns. Hosted Supabase, production hosting/security, beta durable-agent engine and production providers remain unproved. The proof's stream is deliberately synthetic; it does not implement V1 conversational memory.
 
 1. The only durable fact about what was said is its preserved original source; model summaries are derived, revisable interpretations.
 2. Background action outcomes and application writes are independent of conversational delivery. Success is acknowledged only after validated persistence.
