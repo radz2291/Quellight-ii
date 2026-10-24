@@ -1,0 +1,32 @@
+# Local environment, secrets and temporary credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*service-role*.json
+*service_role*.json
+
+# Dependencies, builds and local tooling
+node_modules/
+.next/
+.svelte-kit/
+dist/
+build/
+coverage/
+.turbo/
+.cache/
+*.log
+
+# Local/temporary data exports must never be tracked
+tmp/
+private/
+secrets/
+exports/
+backups/
+local-data/
+*.dump
+*.backup
+*.sqlite
+*.db
+
