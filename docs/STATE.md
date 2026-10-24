@@ -4,10 +4,10 @@
 
 ## Implemented candidate
 
-- [Local setup](cycle-1/SETUP.md): loopback native HTTP/browser shell, real PostgreSQL SCRAM owner authentication, distinct per-owner runtime/worker roles and actual ENABLED/FORCED RLS.
+- [Local setup](cycle-1/SETUP.md): selected Next.js + assistant-ui shell with preserved API/worker, real PostgreSQL SCRAM owner authentication, distinct per-owner runtime/worker roles and actual ENABLED/FORCED RLS. [UI choice and integration](cycle-1/UI-STACK.md) follows the owner's additional instruction.
 - [Contract](cycle-1/IMPLEMENTATION.md): five strict primitives; original sources, records, revisions, receipts and events; atomic foreground commits; persisted queue and separate worker; generation/lease checks and unique effect receipts; cancellation/failure/retry.
 - Real Mastra two-turn fake-model discovery/streaming. No real model inference, semantic memory or claim that the beta durable wrapper has been proved.
-- Definition/skill-based seed v2 extension, dynamic fields and guarded rollback; note/task v1 compatibility. [Builder evidence and retained failures](cycle-1/BUILD-EVIDENCE.md); final exact-commit independent verification pending.
+- Definition/skill-based seed v2 extension, dynamic fields and guarded rollback; note/task v1 compatibility. Original candidate 498b9ea independently [HELD](cycle-1/VERIFICATION-01.md) for a delayed save crossing an owner switch. Both selected and preserved UIs now reject that regression; successor exact-commit independent verification pending. [Builder evidence and retained failures](cycle-1/BUILD-EVIDENCE.md).
 
 ## Accepted history and boundaries
 

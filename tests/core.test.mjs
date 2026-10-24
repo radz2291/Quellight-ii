@@ -129,6 +129,7 @@ test('HTTP auth/session/CSRF, owner SSE, foreground restart, IDOR, cancellation,
  assert.equal((await req('/api/ops/query',{})).status,401);
  assert.equal((await req('/api/login',{username:'alice',password:'bad'})).status,401);
  let a=await login('alice');let b=await login('bob');
+ const staleIntent=await fetch(origin+'/api/ops/create',{method:'POST',headers:{Origin:origin,'Content-Type':'application/json',Cookie:b,'X-QL-Owner-Context':'alice'},body:JSON.stringify(fixture())});assert.equal(staleIntent.status,409);assert.deepEqual(await staleIntent.json(),{error:'owner_context_changed'});
  assert.equal((await req('/api/ops/create',fixture(),a,'http://evil.invalid')).status,403);
  const sentinel='SYNTHETIC_PRIVATE_SOURCE_'+randomUUID();const payload=fixture({source:sentinel,data:{title:'Persistent HTTP note',body:sentinel}});
  const r=await req('/api/ops/create',payload,a);assert.equal(r.status,200);const created=await r.json();

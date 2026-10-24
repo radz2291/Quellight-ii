@@ -7,7 +7,9 @@ import { config } from './config.mjs';
 import { gateway,snapshot,AppError } from './gateway.mjs';
 import { closePools } from './db.mjs';
 import { streamCompanion } from './model.mjs';
-const port=Number(process.env.QL_PORT||4317),origin='http://127.0.0.1:'+port;
+const port=Number(process.env.QL_PORT||4318),origin='http://127.0.0.1:'+port;
+const frontend=process.env.QL_FRONTEND_ORIGIN;
+if(frontend&&!/^http:\/\/127\.0\.0\.1:\d+$/.test(frontend))throw Error('Local frontend required');
 const sessions=new Map(),subscribers=new Set();
 let attempts=0,windowStart=Date.now();
 function session(req){const token=(req.headers.cookie||'').split(';').map(s=>s.trim()).find(s=>s.startsWith('ql_session='))?.slice(11);const s=sessions.get(token);if(!s||s.expires<Date.now()){sessions.delete(token);return null;}return {...s,token};}
@@ -23,7 +25,7 @@ export const server=http.createServer(async(req,res)=>{
   const url=new URL(req.url,origin);
   if(url.search)throw new AppError('unexpected_parameters');
   if(req.method==='POST') {
-   if(req.headers.origin!==origin||!/^application\/json(?:;|$)/.test(req.headers['content-type']||''))throw new AppError('origin_or_content_type',403);
+   if(![origin,frontend].filter(Boolean).includes(req.headers.origin)||!/^application\/json(?:;|$)/.test(req.headers['content-type']||''))throw new AppError('origin_or_content_type',403);
   }
   if(req.method==='GET'&&['/','/app.js','/style.css'].includes(url.pathname)) {
    const file=url.pathname==='/'?'index.html':url.pathname.slice(1);
@@ -43,6 +45,8 @@ export const server=http.createServer(async(req,res)=>{
    res.setHeader('Set-Cookie',`ql_session=${token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=28800`);json(res,200,{owner:username});return;
   }
   const s=session(req);if(!s)throw new AppError('unauthenticated',401);
+  // Optional UI precondition detects stale intents after an owner switch. It grants no identity.
+  if(req.headers['x-ql-owner-context']&&req.headers['x-ql-owner-context']!==s.owner)throw new AppError('owner_context_changed',409);
   if(req.method==='GET'&&url.pathname==='/api/me'){json(res,200,{owner:s.owner});return;}
   if(req.method==='POST'&&url.pathname==='/api/logout') {await body(req);sessions.delete(s.token);res.setHeader('Set-Cookie','ql_session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0');json(res,200,{ok:true});return;}
   if(req.method==='GET'&&url.pathname==='/api/activity'){json(res,200,await snapshot(s.owner));return;}

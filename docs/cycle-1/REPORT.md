@@ -4,9 +4,9 @@ Owner-authorized ticket II-002. This report describes a **local synthetic functi
 
 ## Delivered behavior
 
-The browser shell authenticates synthetic Alice/Bob against real PostgreSQL. Each owner can explicitly preserve an original thought as a note/task, query it after process restart, inspect source and revision/action history, and correct the title. Five generic primitives validate schemas and authorize on the server; RLS and composite keys enforce database owner boundaries. A separate Steward worker performs two deterministic Mastra model turns with discovery, then commits one source-linked effect. Generation/lease fencing, transaction receipts, cancellation, retry, duplicate dispatch and kill/restart checks preserve that single applied effect.
+The selected Next.js + assistant-ui shell authenticates synthetic Alice/Bob against real PostgreSQL. [Stack evaluation](UI-STACK.md) records the owner's addition, selection and maintenance justification; original work remains preserved. Each owner can explicitly preserve an original thought as a note/task, query it after process restart, inspect source and revision/action history, and correct the title. Five generic primitives validate schemas and authorize on the server; RLS and composite keys enforce database owner boundaries. A separate Steward worker performs two deterministic Mastra model turns with discovery, then commits one source-linked effect. Generation/lease fencing, transaction receipts, cancellation, retry, duplicate dispatch and kill/restart checks preserve that single applied effect.
 
-The seed-domain v2 definition/skill extends the same gateway and dynamic form without seed-specific core changes. Empty-database up/down/up and refusal of a destructive downgrade with retained v2 data are tested. Sources and prior revisions stay preserved. The owner requested **Quellight** naming; current UI/docs/project display follow it. Stable existing repository/ticket references and accepted historical evidence remain intact.
+The default interface is a warm conversation. Your space opens secondary save/source/history/JSON/run inspection; users do not need records/primitives/Steward concepts for the main screen. This bounded owner-directed presentation change preserves the backend and all inspection capabilities. The seed-domain v2 definition/skill extends the same gateway and dynamic form without seed-specific core changes. Empty-database up/down/up and refusal of a destructive downgrade with retained v2 data are tested. Sources and prior revisions stay preserved. The owner requested **Quellight** naming; current UI/docs/project display follow it. Stable existing repository/ticket references and accepted historical evidence remain intact.
 
 ## Reproduction and evidence
 
@@ -16,7 +16,7 @@ The seed-domain v2 definition/skill extends the same gateway and dynamic form wi
 
 ## Lineage
 
-Base `a8c40fe74163b3273f603cab93453d86fb54bd1d` includes accepted C0 merge `16e9f187c72a441aa1be30a466514b9f0d43ebe4`. Stage branch `codex/c1-core-vertical`. Exact candidate, independent verdict/evidence SHA, any repaired successor and final delivery/PR are to be recorded after candidate integration. No self-merge or Cycle 2 authority.
+Base `a8c40fe74163b3273f603cab93453d86fb54bd1d` includes accepted C0 merge `16e9f187c72a441aa1be30a466514b9f0d43ebe4`. Stage branch `codex/c1-core-vertical`. Original candidate `498b9ea27dbd3f8c2bf4a8f04f92de9925a7fd89` is independently [HELD](VERIFICATION-01.md) for F1, pending save crossing an owner switch. Repaired/mature-UI successor captures the initiating scope before asynchronous work, rejects stale dispatch, and adds a gateway owner-context precondition. Exact successor/verifier/delivery/PR lineage follows after integration. No self-merge or Cycle 2 authority.
 
 ## Gate reconciliation before independent review
 

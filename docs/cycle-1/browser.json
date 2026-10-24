@@ -1,15 +1,19 @@
 {
   "verdict": "PASS",
+  "stack": "Next.js + assistant-ui",
   "passed": [
+    "Default is Companion-first; records/JSON/history/runs stay behind Your space",
     "Alice streaming, committed note, original source and correction revisions",
     "Lost acknowledgment retries retain browser idempotency key",
     "Queue visibly queued, separate worker finishes, source/result inspectable",
     "390px mobile layout has no horizontal overflow",
     "Sign-out clears Alice UI; Bob isolated task persists across page reload",
     "Seed v2 definition dynamically renders and saves without domain UI changes",
+    "assistant-ui handles stop and failed response without a saved-record claim",
+    "F1 delayed digest/save followed by owner switch is rejected before dispatch",
     "No browser JavaScript errors"
   ],
-  "durationMs": 17647,
+  "durationMs": 17072,
   "browser": "156.0.8078.4",
   "viewport": [
     1440,
