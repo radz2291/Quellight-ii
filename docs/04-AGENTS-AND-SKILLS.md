@@ -62,3 +62,5 @@ Queue message ≠ completed one-turn task. A separate durable Mastra worker must
 
 See [Architecture](02-ARCHITECTURE.md), [Trust & inspection](05-TRUST-AND-INSPECTION.md), and [Evolution](06-EVOLUTION.md).
 
+Cycle 0 implementation proposals: [primitive envelopes and worker/JIT protocols](cycle-0/CONTRACTS.md). [Technology evidence](cycle-0/TECHNOLOGY.md) distinguishes direct workspace BM25 skill search from model-driven skill selection, and durable API presence from process-restart recovery. Neither successful local search nor a loaded skill grants filesystem/shell/database authority in the product.
+

@@ -43,3 +43,5 @@ For each claim, save command/reproduction steps, the exact tested SHA, data fixt
 
 Before declaring V1 ready, evaluate recall from real historical conversations through a private, owner-authorized test set with positive, ambiguous, stale-preference and negative questions. Track retrieval source correctness, grounded answer quality, false-memory rate, timezone accuracy, correction persistence and privacy isolation. **No numerical quality target is invented yet**; Cycle 0 should propose thresholds and owner review procedure.
 
+Cycle 0's [test/quality proposal](cycle-0/EVOLUTION-AND-TEST-PLAN.md) now supplies candidate benchmark sizes, acceptance thresholds, fault cases and resource targets. They require owner review and later measurement; they are not accepted quality guarantees. The Cycle 0 report must distinguish documentation/API feasibility from application memory, RLS, multi-turn recovery and browser behavior, all of which require later runtime proof.
+

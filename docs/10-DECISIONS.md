@@ -40,3 +40,14 @@ These are not statements that current package APIs, pricing or deployment settin
 
 Future changes must record owner authority, superseded decision, affected contracts, migration effects and next test. See [Evolution](06-EVOLUTION.md).
 
+## Cycle 0 amendments — 2026-10-24
+
+| ID | Decision / amendment | Basis and affected contracts | Authority and status |
+| --- | --- | --- | --- |
+| D-017 | ARA-Light is the authorized legacy discovery source; staging is not the historical source | Owner answered source-selection question; read-only scope remains D-010/HANDOFF; [source audit](cycle-0/SOURCE-AUDIT.md) | Owner-confirmed; no import authority |
+| D-018 | Prepare replacement of ARA-Light staging with a new Quellight II project for the next cycle | Owner reports two-project account limit and requested replacement, then explicitly chose "Prepare replacement for next cycle" when timing was clarified; [retirement/provisioning plan](cycle-0/IMPORT-AND-OPERATIONS.md) | Owner direction for planning only; no deletion/provisioning in II-001; budget/account/backup/disposition still to verify |
+| D-019 | Retain Mastra as candidate behind application-owned source/mutation/run boundaries; require configured recovery and privacy proof | Current docs and isolated API evidence; default redaction does not remove arbitrary prose, in-memory API checks do not prove recovery; [technology](cycle-0/TECHNOLOGY.md), [contracts](cycle-0/CONTRACTS.md) | Technical recommendation, not owner acceptance or production selection |
+| D-020 | Preserve source snapshot+ordinal identity; quarantine unsupported legacy parts/roles before import | No message IDs, timestamp ties and heterogeneous content observed; [source audit](cycle-0/SOURCE-AUDIT.md), [import plan](cycle-0/IMPORT-AND-OPERATIONS.md) | Evidence-driven import proposal; implementation/import remain later gates |
+
+Historical "Facts not yet established" above is preserved as bootstrap context. Cycle 0 establishes source project identity and structural owner-scoped counts/dates only; destination auth mapping, attachment recovery, exact budget/hosting and production behavior remain unestablished. Current verdict and next allowed action are only in [STATE](STATE.md).
+

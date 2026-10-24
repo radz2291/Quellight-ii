@@ -43,6 +43,8 @@ Read the tool's **current schema**; don't assume every environment exposes the s
 
 **Known connector efficiency limit (2026-10-24):** A Work workspace read was observed returning the owner's entire workspace (roughly 738 KB); attempted `projectId` filters did not narrow its result. Where possible, parse and select only `Quellight II` project/tickets/standards/comments **locally before adding them to model context**. Reuse the revision returned by successful writes instead of fetching a huge workspace repeatedly. Do not infer that a project-scoped API exists; improving server-side filtered reads is an optional future Rolladice Work integration task, not a blocker for the manual Cycle 0 handoff.
 
+**Cycle 0 verified amendment:** the current tool schema now supports `read_workspace({projectId,view:"summary"|"full"})`; a project-scoped full read returned only Quellight II with its ticket/comments/standard/runs. Prefer that supported route. Successful update responses still returned a broad workspace, so locally extract revision/result and relevant project before exposing tool output. This supersedes the earlier no-filter observation for reads; do not assume write response size is fixed. No connector implementation was changed in II-001.
+
 ## Privacy and security
 
 - Work is a private owner workspace, but do not paste raw personal conversations, user exports, credentials, service keys, unredacted auth/debug logs or sensitive data into tickets/comments. Use aggregates or appropriately scoped links.

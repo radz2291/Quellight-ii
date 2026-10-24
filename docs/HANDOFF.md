@@ -51,3 +51,7 @@ Own the whole accepted Cycle 0 outcome: investigate, document, integrate bounded
 
 The user's priority order is **memory quality, truthful continuity, change-tolerant architecture and inspectable autonomy**, ahead of a large feature count.
 
+## Owner scope clarification during II-001 — 2026-10-24
+
+Owner confirmed ARA-Light as the previous Quellight source. Owner requested staging replacement to free account capacity, then explicitly clarified **"Prepare replacement for next cycle"**. This adds retirement/provisioning planning to the future-stage proposal only; no deletion/provisioning now. ARA-Light remains read-only and excluded from retirement. Record account/cost/backup/disposition unknowns in the proposal. Cycle 0 and its review boundary remain unchanged.
+
