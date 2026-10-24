@@ -1,16 +1,21 @@
 # Quellight — current project state
 
-**2026-10-25 — II-002 actively implementing the owner-launched local Cycle 1 proof.** Dedicated branch codex/c1-core-vertical, pinned baseline a8c40fe74163b3273f603cab93453d86fb54bd1d. No owner acceptance of Cycle 1 or independent candidate verdict yet. Authority: [HANDOFF](HANDOFF.md). Current product/project display name is Quellight by owner direction; existing repository URL and ticket identifiers remain stable references.
+**2026-10-25 — II-002 Cycle 1 independently PASS at local synthetic functional scope; owner review required.** No owner acceptance, merge, Cycle 2, hosted-resource or real-inference authority. [HANDOFF](HANDOFF.md) remains the bounded authority. Product/project display name is Quellight; stable repository/ticket identifiers remain references.
 
-## Implemented candidate
+## Verified delivery
 
-- [Local setup](cycle-1/SETUP.md): selected Next.js + assistant-ui shell with preserved API/worker, real PostgreSQL SCRAM owner authentication, distinct per-owner runtime/worker roles and actual ENABLED/FORCED RLS. [UI choice and integration](cycle-1/UI-STACK.md) follows the owner's additional instruction.
-- [Contract](cycle-1/IMPLEMENTATION.md): five strict primitives; original sources, records, revisions, receipts and events; atomic foreground commits; persisted queue and separate worker; generation/lease checks and unique effect receipts; cancellation/failure/retry.
-- Real Mastra two-turn fake-model discovery/streaming. No real model inference, semantic memory or claim that the beta durable wrapper has been proved.
-- Definition/skill-based seed v2 extension, dynamic fields and guarded rollback; note/task v1 compatibility. Original candidate 498b9ea independently [HELD](cycle-1/VERIFICATION-01.md) for a delayed save crossing an owner switch. Both selected and preserved UIs now reject that regression; successor exact-commit independent verification pending. [Builder evidence and retained failures](cycle-1/BUILD-EVIDENCE.md).
+- Branch codex/c1-core-vertical; exact baseline a8c40fe74163b3273f603cab93453d86fb54bd1d. Original498b9ea27dbd3f8c2bf4a8f04f92de9925a7fd89 independently [HELD](cycle-1/VERIFICATION-01.md) for delayed pending save crossing an owner switch. Failure/probe retained.
+- Repaired exact candidate **86b49fd9d43a95a50448568afded57fb5ef51992** independently [PASS](cycle-1/VERIFICATION-02.md); verifier-evidence commit **fd6cf1aba4e596e559ee640217e89a8cdf20b5ce**. Later closure is documentation/evidence only. Final delivery SHA and remote proof are pinned in [draft PR #2](https://github.com/radz2291/Quellight-ii/pull/2) and private Work II-002.
+- [Selected stack](cycle-1/UI-STACK.md): Next.js/React/assistant-ui. Companion-first default; Your space is secondary save/source/history/JSON/run inspection. Original native fixture preserved. [Setup](cycle-1/SETUP.md) and [owner report](cycle-1/REPORT.md).
+- Real local SCRAM owner auth/RLS, five generic primitives, atomic sources/records/revisions/receipts/events, separate queue/worker, generation/lease fencing, cancellation/failure/retry and deduplicated effects across before/after-effect process kills. Real Mastra two-turn fake-model loop; no claim that its beta durable wrapper is proved.
+- Seed v2 definition/skill reference/dynamic UI, v1 compatibility, safe migration/rollback. Independent clean install, eight integration groups, seven reviewer groups, checkJs/strict Next TS/TSX, production build, selected browser10 and native8 all PASS. Original F1 fenced; default/secondary visibility and stop/error tested. [Repairs](cycle-1/REPAIRS-01.md).
 
 ## Accepted history and boundaries
 
-II-001 Cycle 0 is owner-accepted/done. PR #1 merged at 16e9f187c72a441aa1be30a466514b9f0d43ebe4; research delivery 6672e646e869fbdb5f098d9c0395b0d6ddd3a701, verified core 0a1c0aa71688cd52680cb8498f0cf7ab377f7d70. Immutable [C0 report](cycle-0/REPORT.md) and [independent verdict](cycle-0/VERIFICATION-02.md) retain scope and earlier HELD lineage. Historical aggregate source inventory is not live import or C1 source access evidence.
+II-001 is owner-accepted/done; PR #1 merged at16e9f187c72a441aa1be30a466514b9f0d43ebe4. Immutable [C0 report](cycle-0/REPORT.md) retains research evidence and earlier failed lineage. C0 source inventory is not C1 live source access or import evidence.
 
-No C1 Supabase connector/source query, legacy mutation/remediation, real staging retirement, new hosted project, personal import, paid inference or deployment. [Hosted prerequisites](cycle-1/HOSTED-RESOURCE-GATE.md) remain pending specific authority and verified backup/restore/account/cost evidence. V1 continuity, production security/hosting, multi-instance operations, actual provider quality and full JIT/semantic memory remain NOT DEMONSTRATED. Next action: exact candidate verification, in-scope repairs, Work checklist/evidence synchronization and owner Review. No Cycle 2 authority.
+No C1 source/Supabase connector query, legacy mutation/remediation, staging retirement, hosted provisioning, personal import, paid inference or deployment. [Hosted checklist](cycle-1/HOSTED-RESOURCE-GATE.md) explicitly retains unresolved live identity/entitlement/disposition/backup/independent restore/cost/region/approval gates. Full conversation persistence, semantic memory/JIT retrieval, actual provider behavior/quality/cost, production auth/TLS, distributed operations and V1 readiness remain NOT DEMONSTRATED. Minor limits: nested-clone build warning and short-lived notice overlap.
+
+## Review boundary
+
+Complete mandatory Work criterion/summary/output/discussion/run/Review synchronization and persistence re-read before the final delivery response. Only Radzi accepts; no automatic merge or next cycle. The independently verified implementation is ready for that owner review, with exact final Git delivery/Work persistence evidence recorded externally after closure documentation is committed.
