@@ -19,8 +19,9 @@ SELECT jsonb_build_object(
     'max_modified', max(last_modified), 'rooms', count(DISTINCT room_id),
     'message_count_sum', sum(message_count),
     'actual_messages', sum(jsonb_array_length(data->'messages')),
+    'cached_null_sessions', count(*) FILTER (WHERE message_count IS NULL),
     'mismatched_count_sessions', count(*) FILTER (
-      WHERE message_count <> jsonb_array_length(data->'messages')),
+      WHERE message_count IS DISTINCT FROM jsonb_array_length(data->'messages')),
     'json_bytes', sum(octet_length(data::text))) FROM scoped),
   'roles', (SELECT jsonb_agg(x) FROM (
     SELECT CASE WHEN msg->>'role' IN (
@@ -29,6 +30,8 @@ SELECT jsonb_build_object(
     FROM messages GROUP BY 1) x),
   'shapes', (SELECT jsonb_build_object(
     'missing_id', count(*) FILTER (WHERE msg->>'id' IS NULL),
+    'id_key_present', count(*) FILTER (WHERE msg ? 'id'),
+    'id_key_with_null', count(*) FILTER (WHERE msg ? 'id' AND msg->>'id' IS NULL),
     'content_arrays', count(*) FILTER (WHERE jsonb_typeof(msg->'content')='array'),
     'content_strings', count(*) FILTER (WHERE jsonb_typeof(msg->'content')='string'),
     'timestamp_number', count(*) FILTER (WHERE jsonb_typeof(msg->'timestamp')='number'),

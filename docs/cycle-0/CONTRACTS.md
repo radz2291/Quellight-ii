@@ -8,8 +8,8 @@ Use an application-owned source ledger and typed records as truth. Mastra histor
 
 | Relation | Required typed fields and integrity |
 | --- | --- |
-| `sources` | UUID id, owner_id, source_kind, origin_alias, original_container_id, original_item_key, import_batch_id?, content_digest, observed_at, original_timestamp_raw?, occurred_at?, timestamp_basis, visibility, retention_class. Unique owner/origin/container/item. Opaque IDs may stay private; no public signed links. |
-| `messages` | UUID id, owner_id, source_id, conversation_id, ordinal, original_role, normalized_role, versioned content_parts, created_at?, timestamp_basis. Unique owner/conversation/ordinal/source_snapshot. Immutable source preservation; corrections are separate records. |
+| `sources` | UUID id, owner_id, source_kind, origin_alias, original_container_id, original_item_key, source_snapshot, import_batch_id?, content_digest, observed_at, original_timestamp_raw?, occurred_at?, timestamp_basis, visibility, retention_class. Unique owner/origin/container/item/source_snapshot. Opaque IDs stay private; no public signed links. |
+| `messages` | UUID id, owner_id, source_id, conversation_id, source_snapshot, ordinal, original_role, normalized_role, versioned content_parts, created_at?, timestamp_basis. Unique owner/conversation/ordinal/source_snapshot. Immutable source preservation; corrections are separate records. |
 | `record_definitions` | owner scope or reviewed system scope, kind, integer definition_version, validated JSON Schema, allowed link types, indexed field mapping, migration/read compatibility. Immutable published versions. Models cannot register definitions. |
 | `records` | UUID id, owner_id, kind, definition_version, integer revision, typed lifecycle/authority, title, created_at/updated_at, valid_from/valid_until?, source refs, bounded validated payload. No arbitrary SQL/filter expressions. |
 | `record_revisions` | owner_id, record_id, revision, actor_id/type, operation_id, run_id?, reason, before/after or redacted delta, evidence refs, committed_at. Unique owner/record/revision. Written atomically with mutation. |
@@ -22,6 +22,8 @@ Use an application-owned source ledger and typed records as truth. Mastra histor
 
 Critical query fields are typed columns or reviewed typed projections: deadline_date (date), due_at (timestamptz), timezone (IANA ID), observed_at, target count and interval. Use UTC instants plus original date/timezone/raw timestamp; never replace an unknown message time with the session creation time without a marked fallback. Do not convert a date-only task into midnight UTC. Definition versions control bounded JSON fields; reject unknown properties by default. Index `(owner_id, kind, lifecycle, updated_at)`, owner/source keys, due fields, and owner/run/state/heartbeat. Measure before partitioning.
 
+`source_snapshot` is the immutable canonical source-container digest/version recorded by an import manifest, not a worker attempt or import timestamp. Repeating the same snapshot reuses identity/receipts. A changed source array requires an explicit reconciled successor snapshot; preserve old sources and link replacements instead of silently moving ordinals or reimporting all messages as current duplicates. Source and message snapshot fields must match, enforced by a composite owner/source/snapshot FK or equivalent transaction validation. Snapshot serialization and unchanged-item reconciliation are importer contracts to test before real import.
+
 Authority is orthogonal to provenance and lifecycle: `author_kind=user|assistant|agent|importer`, `claim_kind=assertion|suggestion|inference|commitment|observation`, `authority=tentative|confirmed|disputed`, `lifecycle=active|superseded|removed`. A confidence number never promotes an assistant suggestion into user confirmation. Supersession points to both prior record/revision and correcting evidence.
 
 ## Primitive envelope
@@ -32,7 +34,7 @@ Illustrative TypeScript shapes, not a published SDK:
 type EvidenceRef = { sourceId: string; part?: number; start?: number; end?: number };
 type RequestContext = { // constructed server-side, absent from model input
   ownerId: string; actorId: string; actorKind: "user" | "companion" | "steward";
-  permissions: readonly string[]; runId?: string; requestId: string;
+  permissions: readonly string[]; runId?: string; leaseGeneration?: number; requestId: string;
 };
 type MutationBase = {
   apiVersion: "0.1"; operationId: string; reason: string;
@@ -64,7 +66,7 @@ Hard limits above are proposed initial validation bounds, not measured performan
 ## Atomicity, idempotency and races
 
 1. Authenticate, bind context, validate schema and policy including approval digest/revision/expiry. Bind canonical input hash to `(owner, operationId)`.
-2. In one DB transaction, reserve operation, lock touched records in stable order, verify expected revisions and source ownership, apply data+revision+event+outbox and persist result receipt. Roll back everything on failure.
+2. In one DB transaction, reserve operation, lock the run row when this is worker-originated, verify current leaseGeneration, unexpired lease using database time, owner and non-cancelled status, then lock touched records in stable order. Verify expected revisions/source ownership, apply data+revision+event+outbox and persist receipt. A stale worker may read an existing receipt but cannot create a new effect. Lease generation is trusted worker context, not model input. The same fenced transaction guards renewal/terminal writes; never check the lease only before inference. Roll back everything on failure.
 3. Duplicate concurrent operation keys wait for the first transaction; after commit return the stored receipt. Different hash returns CONFLICT. Crashed uncommitted transaction leaves no partial reservation; expired execution lease cannot bypass DB checks.
 4. Different operation keys editing the same revision: one commits, the other conflicts. Re-read and reconsider; do not blindly replay a stale patch with the new revision.
 5. Queue acknowledgement happens after application commit. Crash before ack permits redelivery; receipt deduplication prevents a second effect. Never claim exactly-once execution or delivery beyond the queue visibility window.

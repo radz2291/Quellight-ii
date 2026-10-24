@@ -93,6 +93,14 @@ The clone now contains the inspected synthetic probe, full npm lock, package man
 | [package-lock.json](probes/mastra/package-lock.json) | `DBCE3DD78EA42B709DDE6156E9DB17EE45ECC43B7922FD7C9CD6148A9984C4B8` |
 | [workspace/skills/temporal/SKILL.md](probes/mastra/workspace/skills/temporal/SKILL.md) | `057AAD72E240F1889D044F4EE325AB046633C6E070466FA4E8F4852533A57702` |
 
+Published hashes above identify canonical Git blob bytes (LF line endings). A normal Windows clone with `core.autocrlf=true` may materialize CRLF and produce different raw `Get-FileHash` values without a content change. For portable verification, hash the committed blob, for example from the repository root:
+
+```powershell
+node -e "const c=require('node:crypto'),p=require('node:child_process'); for(const f of ['probe.mjs','package.json','package-lock.json','workspace/skills/temporal/SKILL.md']) console.log(f,c.createHash('sha256').update(p.execFileSync('git',['show','HEAD:docs/cycle-0/probes/mastra/'+f])).digest('hex'));"
+```
+
+The later raw working-file hashes in the replay command are diagnostic only; normalize line endings or use the Git blob command before comparing to the table. Behavior replay is separate from byte identity.
+
 Published-fixture replay on the research date: copied only these four files into ignored `tmp/c0-mastra-published-replay`, ran a fresh `npm ci` (175 installed packages), then `node probe.mjs`; both exited 0 and all four check groups passed. Replayed lock/script hashes matched the table. This replay reused the same machine and is builder verification, not an independent audit.
 
 From the repository root in a fresh clone, copy the fixtures into ignored `tmp/` and execute there:
