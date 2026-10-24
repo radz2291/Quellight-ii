@@ -48,3 +48,5 @@ Use a durable activity ledger distinct from raw vendor tracing; records must be 
 
 The repository was **public** on 2026-10-24. Never commit actual personal history, unredacted captures or secrets, even to a private branch. Keep private evaluation data in controlled storage.
 
+Cycle 0 found that default vendor sensitive-field filtering can leave transcript prose and nonmatching secret field names intact; see [technology counterexample](cycle-0/TECHNOLOGY.md). The proposed exporter therefore allowlists redacted operational fields, while source evidence stays in protected storage. [Failure tests](cycle-0/EVOLUTION-AND-TEST-PLAN.md) cover sentinel leaks, stale retrieval after forgetting, authorization across live subscriptions and privileged worker boundaries. These are required tests, not demonstrated product security.
+

@@ -38,7 +38,7 @@ Only relevant information reaches each model turn. JIT procedure skills and JIT 
 
 ## Historical Quellight source and selective import
 
-**Decision:** a new Supabase project is the destination. The former Supabase project is a read-only source. Its actual schema, row counts, access method, attachment coverage, auth mapping and dates are **unknown until Cycle 0**.
+**Decision:** a new Supabase project is the destination. The former Supabase project is a read-only source. [Cycle 0 source audit](cycle-0/SOURCE-AUDIT.md) records observed owner-scoped structure/counts/dates and access limits; unknown role/part mappings, attachment recoverability and destination auth mapping remain explicit later gates. Do not treat aggregate inventory as import authority.
 
 Import approach after authorization:
 
@@ -58,4 +58,6 @@ Inspect, correct, merge, dispute, export, pause remembering and request removal 
 ## Proof requirements
 
 See [Acceptance](09-ACCEPTANCE.md): cross-thread recall, exact source retrieval, temporal queries, contradiction handling, deliberate forgetting, restart/reindex and isolation tests. Data correctness and memory usefulness are both required.
+
+[Proposed typed source/record/authority contracts](cycle-0/CONTRACTS.md) keep claim kind, author, authority and lifecycle independent. [Import plan](cycle-0/IMPORT-AND-OPERATIONS.md) requires source snapshot identity plus array position where legacy message IDs are absent, preserves original timestamps and quarantines unsupported parts. No unreviewed thinking/tool/artifact material becomes ordinary personal memory.
 

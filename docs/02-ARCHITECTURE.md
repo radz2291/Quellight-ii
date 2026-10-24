@@ -64,3 +64,7 @@ Use internal contracts for conversation, memory search, record operations, backg
 
 Keep these as **Cycle 0 research outputs**, not silently accepted facts.
 
+## Cycle 0 evidence and implementation proposal
+
+[Technology feasibility](cycle-0/TECHNOLOGY.md) records exact retrieved package candidates, primary sources and synthetic API probes. Mastra durable APIs are beta/configuration-dependent; constructor success does not prove recovery. Keep an application-owned source/record/activity ledger, explicit owner/resource mapping and idempotent transactional gateway; vendor memory and traces remain projections. [Typed contracts](cycle-0/CONTRACTS.md) specify the proposed boundaries, run lifecycle, context budgets and concurrency protocol. [Operations/import plan](cycle-0/IMPORT-AND-OPERATIONS.md) covers provisioning, retention and backup limits. These technical proposals do not authorize implementation or spending. Live verdict is in [STATE](STATE.md).
+

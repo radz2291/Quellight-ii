@@ -1,6 +1,6 @@
 # 07 — Previous Quellight conversation import — pre-audit contract
 
-**Current state: NOT INSPECTED.** Owner reports months of conversations in a previous Supabase project. Its identity, schema, authorization model, data quality and exports have not been verified.
+This is the permanent import boundary. Observed source structure, owner-scoped aggregates, access limitations and unresolved mappings are in [Cycle 0 source audit](cycle-0/SOURCE-AUDIT.md); live gate status is only in [STATE](STATE.md). The owner confirmed ARA-Light as the source. Schema/aggregate inspection is not a historical import or proof of attachment recoverability/user-token isolation.
 
 ## Permanent decisions
 
@@ -32,4 +32,6 @@ Record **aggregate/redacted** evidence for:
 - Curate personal knowledge in a **separate** evidence-backed Steward pass; do not treat old assistant-generated suggestions as confirmed user facts.
 
 Cycle 0 should amend this file with the verified source inventory and precise later-stage import recommendations, without performing the import.
+
+The [selective import and operations proposal](cycle-0/IMPORT-AND-OPERATIONS.md) accounts for absent message IDs, mutable source snapshots, heterogeneous roles/parts, mixed timestamp formats, quarantine/conservation checks and separate attachment transfer. Staging replacement is prepared for the next authorized cycle only; ARA-Light remains excluded from retirement.
 

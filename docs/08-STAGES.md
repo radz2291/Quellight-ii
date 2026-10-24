@@ -26,6 +26,8 @@
 
 **Gate:** negative security, version/concurrency, idempotency, restart and extensibility checks all pass.
 
+Cycle 0's [bounded Cycle 1 proposal](cycle-0/CYCLE-1-PROPOSAL.md) adds a mock-model durable recovery/streaming proof before relying on beta package behavior, and the owner-requested staging retirement/destination provisioning plan subject to next-cycle authority, verified account/cost and data disposition. It is a proposal, not an amendment granting execution.
+
 ## Cycle 2 — Memory intelligence and historical import
 
 **Goal:** source-grounded cross-session personal continuity, validated historical import, exact retrieval and memory correction.

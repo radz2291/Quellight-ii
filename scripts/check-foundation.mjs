@@ -13,7 +13,12 @@ const required = [
 ];
 
 const failures = [];
-for (const relative of required) {
+// Cycle reports carry contract links too; check every repo documentation file.
+const docs = fs.readdirSync(path.join(root, 'docs'), { recursive: true })
+  .filter(name => name.endsWith('.md'))
+  .map(name => `docs/${name.replaceAll(path.sep, '/')}`);
+const checked = [...new Set([...required, ...docs])];
+for (const relative of checked) {
   const absolute = path.join(root, relative);
   if (!fs.existsSync(absolute)) {
     failures.push(`Missing: ${relative}`);
@@ -58,5 +63,5 @@ if (failures.length) {
   process.stderr.write(`Foundation check FAILED (${failures.length}):\n${failures.join('\n')}\n`);
   process.exit(1);
 }
-process.stdout.write(`Foundation check PASS: ${required.length} documents present, links resolved, Cycle 0 handoff intact.\n`);
+process.stdout.write(`Foundation check PASS: ${checked.length} documents present, links resolved, Cycle 0 handoff intact.\n`);
 

@@ -48,3 +48,5 @@ Stop for a **material product fork** requiring owner judgment; do not stop for r
 
 At Cycle 0 decide measurable targets and budgets for context size, per-run cost, memory recall quality, queue lag, job retries, storage growth and live status. Do not invent performance results before a runnable system exists.
 
+[Cycle 0 seed-library challenge](cycle-0/EVOLUTION-AND-TEST-PLAN.md) accounts for definition/skill/UI changes and identifies collaboration, sensor ingestion and payments as counterexamples needing new core capabilities. It also proposes measurable quality/latency/failure targets for owner review; no measured performance or accepted production budget is implied.
+

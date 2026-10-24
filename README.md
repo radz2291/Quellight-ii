@@ -2,7 +2,7 @@
 
 An independent, memory-centered personal AI companion. Quellight should know its person over time, hold meaningful conversations, help with everyday commitments and practices, and remain inspectable and correctable by its owner.
 
-**Repository status (2026-10-24): foundation documentation only.** No new Quellight application has been implemented, no previous database has been accessed, and no historical conversations have been imported. A coding agent begins with the read-only Cycle 0 investigation, not feature implementation.
+Current delivery and verification status live only in [STATE](docs/STATE.md). This repository contains product specifications and bounded research evidence; a research probe is not an application implementation. Current execution authority lives only in [HANDOFF](docs/HANDOFF.md).
 
 ## Start here
 
