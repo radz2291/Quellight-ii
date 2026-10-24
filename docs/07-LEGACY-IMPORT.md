@@ -4,7 +4,7 @@ This is the permanent import boundary. Observed source structure, owner-scoped a
 
 ## Permanent decisions
 
-- Create a **new, independent Supabase project** for Quellight II.
+- Create a **new, independent Supabase project** for Quellight.
 - Retain the old database intact. Cycle 0 is **read-only**, with no mutations or broad copy of application schemas and runtime configuration.
 - Selectively import owner-authorized conversations and related permitted material only after an explicit later-stage import gate.
 - Do not require old application code or behavior to run the new product.

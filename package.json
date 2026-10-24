@@ -1,0 +1,32 @@
+{
+  "name": "quellight-local-proof",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "db": "node scripts/local-db.mjs start",
+    "db:stop": "node scripts/local-db.mjs stop",
+    "setup": "node scripts/setup.mjs",
+    "start": "node src/server.mjs",
+    "worker": "node src/worker.mjs",
+    "test": "node --test --test-concurrency=1 tests/*.test.mjs",
+    "check": "tsc --noEmit && node scripts/check-foundation.mjs",
+    "build": "node scripts/build.mjs",
+    "test:browser": "node scripts/browser-proof.mjs"
+  },
+  "dependencies": {
+    "@mastra/core": "1.79.0",
+    "pg": "8.23.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.15",
+    "@types/pg": "8.18.0",
+    "embedded-postgres": "18.4.0-beta.17",
+    "playwright": "1.64.1",
+    "typescript": "5.9.3"
+  }
+}

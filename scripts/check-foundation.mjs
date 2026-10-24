@@ -15,8 +15,8 @@ const required = [
 const failures = [];
 // Cycle reports carry contract links too; check every repo documentation file.
 const docs = fs.readdirSync(path.join(root, 'docs'), { recursive: true })
-  .filter(name => name.endsWith('.md'))
-  .map(name => `docs/${name.replaceAll(path.sep, '/')}`);
+  .filter(name => String(name).endsWith('.md'))
+  .map(name => `docs/${String(name).replaceAll(path.sep, '/')}`);
 const checked = [...new Set([...required, ...docs])];
 for (const relative of checked) {
   const absolute = path.join(root, relative);
@@ -46,7 +46,7 @@ for (const expected of ['Cycle 0', 'read-only']) {
 }
 
 const agents = fs.readFileSync(path.join(root, 'AGENTS.md'), 'utf8');
-for (const expected of ['Rolladice Work', 'docs/11-ROLLADICE-WORK.md', 'II-001']) {
+for (const expected of ['Rolladice Work', 'docs/11-ROLLADICE-WORK.md', 'current owner-authorized task']) {
   if (!agents.includes(expected)) failures.push(`Agent entry lacks: ${expected}`);
 }
 for (const previousName of [
@@ -63,5 +63,5 @@ if (failures.length) {
   process.stderr.write(`Foundation check FAILED (${failures.length}):\n${failures.join('\n')}\n`);
   process.exit(1);
 }
-process.stdout.write(`Foundation check PASS: ${checked.length} documents present, links resolved, Cycle 0 handoff intact.\n`);
+process.stdout.write(`Foundation check PASS: ${checked.length} documents present, links resolved, current handoff intact.\n`);
 

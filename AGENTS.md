@@ -1,10 +1,10 @@
-# Quellight II — repository agent entry point
+# Quellight — repository agent entry point
 
 Read **[docs/STATE.md](docs/STATE.md)** and **[docs/HANDOFF.md](docs/HANDOFF.md)** on every new development session. Then read the documents relevant to the accepted stage. The user's latest instructions take precedence over repository guidance; record material changes in [docs/10-DECISIONS.md](docs/10-DECISIONS.md) and amend the affected contracts before implementing them.
 
 ## Persistent work: Rolladice Work
 
-- Use the owner's **Rolladice Work** project `Quellight II` (code `II`) for persistent Codex tickets, status, execution traces and discussion. Read [Rolladice Work protocol](docs/11-ROLLADICE-WORK.md) before claiming work.
+- Use the owner's **Rolladice Work** project `Quellight` (code `II`) for persistent Codex tickets, status, execution traces and discussion. Read [Rolladice Work protocol](docs/11-ROLLADICE-WORK.md) before claiming work.
 - At the beginning of an agent session, check the current project workspace/tickets and discussions with `rolladice_work_read_workspace`, then fetch the selected ticket with `rolladice_work_get_handoff`. Ticket references are project-scoped and evolve; discover the current owner-authorized task dynamically (for example, `II-002` after owner acceptance of Cycle 0). Validate dependencies, pinned standards, review gates and repository scope before starting.
 - When *actually* working, claim with `run_start`, update progress/heartbeat via `run_update`, and communicate decisions, questions and evidence through `task_comment`. Work writes require a fresh revision and idempotent operation ID; only Radzi accepts completed reviews.
 - **Mandatory end-of-task sync:** Before saying “done,” update **every ticket criterion** to its honest evidenced checked/unchecked state with `task_update`; attach exact GitHub branch/base/candidate/verifier/delivery SHAs, PR, reports, outputs and concise residual findings. Post the final discussion, call `run_update` with `finished`, move/confirm ticket status `review` (never `done` yourself), then **re-read that exact ticket** and verify status, criteria, outputs, run and discussion actually persisted. If sync fails, report the exact blocker instead of claiming Work is up to date. Do not tick unsupported criteria; only Radzi accepts.

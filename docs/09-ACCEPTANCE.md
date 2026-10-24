@@ -54,6 +54,8 @@ The checks below are a **local synthetic-data** gate, not historical import, pro
 
 ## Verification contract
 
+Cycle 1 reproduction details: [local setup](cycle-1/SETUP.md), [implemented boundaries](cycle-1/IMPLEMENTATION.md), [builder results and preserved failures](cycle-1/BUILD-EVIDENCE.md), [hosted gate checklist](cycle-1/HOSTED-RESOURCE-GATE.md). Only [STATE](STATE.md) carries the current verdict; implementation claims require exact-commit independent verification.
+
 For each claim, save command/reproduction steps, the exact tested SHA, data fixtures, observed behavior, known limitations and a PASS/FAIL/NOT DEMONSTRATED result. Independent verification uses a fresh context/session/checkout where practical and challenges the candidate. A builder's self-report is not a final gate. Repaired candidates are reverified and prior failures retained. Verdicts: PASS; PASS WITH NON-BLOCKING FINDINGS; HELD; FAIL; BLOCKED. The stage manager reports a truthful verdict and stops at the accepted stage boundary.
 
 ## Real-world memory evaluation
