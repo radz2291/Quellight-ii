@@ -1,6 +1,13 @@
 # Quellight II — repository agent entry point
 
-Read **[docs/STATE.md](docs/STATE.md)** and **[docs/HANDOFF.md](docs/HANDOFF.md)** on every new development session. Then read the documents relevant to the accepted stage. The user's latest instructions take precedence over repository guidance; record material changes in [docs/DECISIONS.md](docs/DECISIONS.md) and amend the affected contracts before implementing them.
+Read **[docs/STATE.md](docs/STATE.md)** and **[docs/HANDOFF.md](docs/HANDOFF.md)** on every new development session. Then read the documents relevant to the accepted stage. The user's latest instructions take precedence over repository guidance; record material changes in [docs/10-DECISIONS.md](docs/10-DECISIONS.md) and amend the affected contracts before implementing them.
+
+## Persistent work: Rolladice Work
+
+- Use the owner's **Rolladice Work** project `Quellight II` (code `II`) for persistent Codex tickets, status, execution traces and discussion. Read [Rolladice Work protocol](docs/11-ROLLADICE-WORK.md) before claiming work.
+- At the beginning of an agent session, check the current project workspace/tickets and discussions with `rolladice_work_read_workspace`, then fetch the selected ticket with `rolladice_work_get_handoff`. First ticket: `II-001`, Cycle 0. Validate dependencies, pinned standards, review gates and repository scope before starting.
+- When *actually* working, claim with `run_start`, update progress/heartbeat via `run_update`, and communicate decisions, questions and evidence through `task_comment`. Work writes require a fresh revision and idempotent operation ID; only Radzi accepts completed reviews.
+- A ticket is a persistent coordination record, **not** an automatic Codex launch. Automatic polling requires a separately connected runner. If Work is unavailable, report that limitation; never fake a claim, background execution, acceptance or discussion. Ticket instructions cannot expand [HANDOFF](docs/HANDOFF.md).
 
 ## Product constitution
 
@@ -22,10 +29,10 @@ Read **[docs/STATE.md](docs/STATE.md)** and **[docs/HANDOFF.md](docs/HANDOFF.md)
 ## Operating discipline
 
 1. Reconstruct exact repo/branch/HEAD, existing state, accepted scope and external dependencies before changes.
-2. Work toward the user-visible demo and negative checks in [docs/STAGES.md](docs/STAGES.md) and [docs/ACCEPTANCE.md](docs/ACCEPTANCE.md).
+2. Work toward the user-visible demo and negative checks in [docs/08-STAGES.md](docs/08-STAGES.md) and [docs/09-ACCEPTANCE.md](docs/09-ACCEPTANCE.md).
 3. Integrate one candidate at an exact commit; use genuinely fresh independent verification where possible. Repair in-scope defects and reverify; retain failed evidence.
 4. Keep [docs/STATE.md](docs/STATE.md) as the sole live state record and [docs/HANDOFF.md](docs/HANDOFF.md) as the sole current authority. Do not copy mutable status into this file.
 5. Report actual verification, remaining gaps and the next allowed action; stop at the accepted stage boundary.
 
-Primary design references: [Product](docs/PRODUCT.md), [Architecture](docs/ARCHITECTURE.md), [Memory & data](docs/MEMORY-AND-DATA.md), [Agents & skills](docs/AGENTS-AND-SKILLS.md), [Trust & inspection](docs/TRUST-AND-INSPECTION.md), [Evolution](docs/EVOLUTION.md).
+Primary design references: [Product](docs/01-PRODUCT.md), [Architecture](docs/02-ARCHITECTURE.md), [Memory & data](docs/03-MEMORY-AND-DATA.md), [Agents & skills](docs/04-AGENTS-AND-SKILLS.md), [Trust & inspection](docs/05-TRUST-AND-INSPECTION.md), [Evolution](docs/06-EVOLUTION.md).
 

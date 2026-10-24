@@ -1,4 +1,4 @@
-# Architecture — responsibilities and boundaries
+# 02 — Architecture — responsibilities and boundaries
 
 **Status:** intended V1 architecture; validate exact library APIs, versions, hosting and operational costs in Cycle 0. No implementation is implied by this document.
 
@@ -52,7 +52,7 @@ Useful official starting references: [Mastra memory](https://mastra.ai/docs/memo
 
 ## Engineering boundaries and extension points
 
-Use internal contracts for conversation, memory search, record operations, background execution, approval and external integrations. Components depend on these contracts rather than importing each other's implementation details. Do not build a speculative plugin framework before a real second implementation exists; demonstrate replaceability through bounded tests and one deliberate change drill. See [Evolution](EVOLUTION.md).
+Use internal contracts for conversation, memory search, record operations, background execution, approval and external integrations. Components depend on these contracts rather than importing each other's implementation details. Do not build a speculative plugin framework before a real second implementation exists; demonstrate replaceability through bounded tests and one deliberate change drill. See [Evolution](06-EVOLUTION.md).
 
 ## Startup and deployment decisions still to verify
 

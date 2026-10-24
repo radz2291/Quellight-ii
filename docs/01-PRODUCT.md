@@ -1,4 +1,4 @@
-# Product contract — Quellight V1
+# 01 — Product contract — Quellight V1
 
 **Status:** owner-directed product intent; implementation unverified. **Audience:** individuals beginning with the owner's own use, but not hardwired to a single person's life or data.
 
@@ -31,7 +31,7 @@ User experience should feel close to the best aspects of ChatGPT personal contin
 
 **In scope:** single-user journey extensible to future accounts, authentication and isolation, text chat, multi-session memory, dated tasks, recurring practices, a basic daily brief, Companion/Steward coordination, JIT skills, source-backed Living Book, basic Inspection Room, recovery and tests.
 
-**Not required for V1:** native mobile apps, full voice experience, automatic SMS/push delivery, outbound email/calendar/payment integrations, multi-user collaboration, a node-based app builder, advanced relationship visualization, unlimited agent autonomy, or exact ChatGPT feature parity. New needs can be evaluated through [Evolution](EVOLUTION.md).
+**Not required for V1:** native mobile apps, full voice experience, automatic SMS/push delivery, outbound email/calendar/payment integrations, multi-user collaboration, a node-based app builder, advanced relationship visualization, unlimited agent autonomy, or exact ChatGPT feature parity. New needs can be evaluated through [Evolution](06-EVOLUTION.md).
 
 ## First-use acceptance stories
 
@@ -44,5 +44,5 @@ The owner should be able to:
 - Correct a memory and see the old assertion superseded, not silently reintroduced.
 - Inspect a background run, its skill versions, sources, changes, failures and retry status.
 
-See [Acceptance](ACCEPTANCE.md) for testable cases and [Stages](STAGES.md) for authorized delivery order.
+See [Acceptance](09-ACCEPTANCE.md) for testable cases and [Stages](08-STAGES.md) for authorized delivery order.
 

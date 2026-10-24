@@ -1,4 +1,4 @@
-# Acceptance scenarios and evidence standard
+# 09 — Acceptance scenarios and evidence standard
 
 **Status:** V1 quality contracts; not executed. The implementation stage that proves each scenario is listed for planning, not assumed complete. Use synthetic multi-user fixtures in the repository; personal historical evaluation data remains private.
 
@@ -23,6 +23,7 @@
 | EVO-01 | 1/5 | Add unexpected 90-day experiment via definitions/skills with bounded changes | No core rearchitecture or regression to tasks/practices |
 | EVO-02 | 5 | Alternate memory retrieval implementation preserves data and recall evidence | No loss of old source identifiers or owner corrections |
 | EVO-03 | 3/5 | Worker restart/duplicate-delivery simulation preserves correct final effects | No twice-applied transaction |
+| EVO-04 | 5 | Introduce a second unforeseen user domain late in development using documented extensions and versioned migrations | No breaking existing memory, task/routine, audit or inspection behavior |
 
 ## Stage 0 acceptance (documentation and read-only evidence only)
 

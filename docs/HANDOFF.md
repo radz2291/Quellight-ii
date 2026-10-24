@@ -1,6 +1,6 @@
 # Current Codex handoff — Cycle 0, read-only foundation and historical discovery
 
-**Authority:** The owner requested the new `https://github.com/radz2291/Quellight-ii` repository be prepared for Codex, and previously authorized a read-only assessment of prior Quellight conversations in Supabase. This document authorizes **Cycle 0 only**; later [STAGES](STAGES.md) are a roadmap, not automatically authorized execution.
+**Authority:** The owner requested the new `https://github.com/radz2291/Quellight-ii` repository be prepared for Codex, previously authorized a read-only assessment of prior Quellight conversations in Supabase, and requested persistent delegation through Rolladice Work. This document authorizes **Cycle 0 only**; later [STAGES](08-STAGES.md) are a roadmap, not automatically authorized execution. Persistent coordination is through Work project `Quellight II` / ticket **`II-001`**, pinned to execution standard revision 1. Resolve private API IDs from the live workspace. The ticket does not expand this authorization.
 
 **Repository:** `radz2291/Quellight-ii` / default `main`. **Baseline:** fetch latest `origin/main` and pin its **exact full SHA in the Cycle 0 evidence before any change**. The remote was initially empty during foundation preparation; do not assume a stale SHA. **Branch:** create an isolated stage branch (suggestion: `codex/c0-foundation-discovery`), preserve main, and open a reviewable handoff without merging unapproved changes.
 
@@ -11,8 +11,9 @@ Own the whole accepted Cycle 0 outcome: investigate, document, integrate bounded
 ## Read first
 
 1. Root [AGENTS.md](../AGENTS.md), [STATE](STATE.md), this [HANDOFF](HANDOFF.md).
-2. [Product](PRODUCT.md), [Architecture](ARCHITECTURE.md), [Memory & data](MEMORY-AND-DATA.md), [Agents & skills](AGENTS-AND-SKILLS.md).
-3. [Trust & inspection](TRUST-AND-INSPECTION.md), [Evolution](EVOLUTION.md), [Legacy import](LEGACY-IMPORT.md), [Acceptance](ACCEPTANCE.md), [Decisions](DECISIONS.md).
+2. [Rolladice Work protocol](11-ROLLADICE-WORK.md). Read the live ticket `II-001`, pinned standard, dependencies, existing discussion and handoff; only then claim actual work.
+3. [Product](01-PRODUCT.md), [Architecture](02-ARCHITECTURE.md), [Memory & data](03-MEMORY-AND-DATA.md), [Agents & skills](04-AGENTS-AND-SKILLS.md).
+4. [Trust & inspection](05-TRUST-AND-INSPECTION.md), [Evolution](06-EVOLUTION.md), [Legacy import](07-LEGACY-IMPORT.md), [Acceptance](09-ACCEPTANCE.md), [Decisions](10-DECISIONS.md).
 
 ## Authorized work
 
@@ -37,15 +38,16 @@ Own the whole accepted Cycle 0 outcome: investigate, document, integrate bounded
 - Verified architecture/technology feasibility and alternatives with direct primary sources.
 - Proposed typed data and primitive tool contracts; explicit remaining unknowns.
 - User test and failure/recovery plan including memory accuracy, dates, no duplicated writes, security and domain-change drill.
-- Updated [STATE](STATE.md), [DECISIONS](DECISIONS.md), affected docs, and candidate/evidence lineage.
+- Updated [STATE](STATE.md), [DECISIONS](10-DECISIONS.md), affected docs, and candidate/evidence lineage.
 - One final owner report: exact branch/base/candidate/verifier SHA, pass criteria C0-01…C0-07, PASS/FAIL/NOT DEMONSTRATED for each, independent verdict, findings and next *proposed* action.
+- Update Work ticket `II-001`: claim and heartbeat during real activity, discuss blockers/important alternatives and post source-linked branch/PR/evidence/final report for **human review**. Work is the durable coordination record, not a substitute for GitHub verification or owner acceptance.
 
 ## Verification loop
 
-1. Implement Cycle 0 documentation/research candidate on the scoped branch and commit it.
+1. Read the live Work handoff and claim ticket `II-001` only when beginning actual Cycle 0 work; implement the documentation/research candidate on the scoped branch and commit it.
 2. Have a fresh independent verifier challenge exact claims/commit; verifier records failures and does not silently repair the audited candidate.
 3. Repair in-scope issues, create a new candidate and rerun affected checks. Preserve red evidence and previous candidates.
-4. Push authorized stage branch only; owner reviews the final gate. Stop at Cycle 0.
+4. Push authorized stage branch only; update Work discussion/run status with the exact tested evidence and submit for owner review. Only Radzi accepts the ticket and the stage. Stop at Cycle 0.
 
 The user's priority order is **memory quality, truthful continuity, change-tolerant architecture and inspectable autonomy**, ahead of a large feature count.
 

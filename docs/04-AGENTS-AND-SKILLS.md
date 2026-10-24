@@ -1,4 +1,4 @@
-# Agents, primitives and just-in-time knowledge
+# 04 — Agents, primitives and just-in-time knowledge
 
 **Status:** runtime design contract. Do not mistake this repository's `AGENTS.md` (coding-agent instructions) for the product's runtime JIT skills.
 
@@ -60,5 +60,5 @@ The Companion resolves the relative date, searches topic + time + source, retrie
 
 Queue message ≠ completed one-turn task. A separate durable Mastra worker must own repeated model/tool interactions, checkpoints and recovery. Foreground confirmations must not wait for optional background enrichment, but explicit “saved” acknowledgements require completed persistence. Avoid duplicate jobs/records via idempotency keys and ownership/version checks.
 
-See [Architecture](ARCHITECTURE.md), [Trust & inspection](TRUST-AND-INSPECTION.md), and [Evolution](EVOLUTION.md).
+See [Architecture](02-ARCHITECTURE.md), [Trust & inspection](05-TRUST-AND-INSPECTION.md), and [Evolution](06-EVOLUTION.md).
 

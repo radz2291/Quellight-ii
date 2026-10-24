@@ -8,10 +8,10 @@ An independent, memory-centered personal AI companion. Quellight should know its
 
 | Reader | Read in order |
 | --- | --- |
-| Owner / product reviewer | [Product](docs/PRODUCT.md) → [Stages](docs/STAGES.md) → [Current state](docs/STATE.md) |
-| New Codex development agent | [AGENTS.md](AGENTS.md) → [Current state](docs/STATE.md) → [Current handoff](docs/HANDOFF.md) |
-| Architecture reviewer | [Architecture](docs/ARCHITECTURE.md) → [Memory & data](docs/MEMORY-AND-DATA.md) → [Agents & skills](docs/AGENTS-AND-SKILLS.md) → [Evolution](docs/EVOLUTION.md) |
-| Trust / experience reviewer | [Trust & inspection](docs/TRUST-AND-INSPECTION.md) → [Acceptance](docs/ACCEPTANCE.md) → [Decisions](docs/DECISIONS.md) |
+| Owner / product reviewer | [Product](docs/01-PRODUCT.md) → [Stages](docs/08-STAGES.md) → [Current state](docs/STATE.md) |
+| New Codex development agent | [AGENTS.md](AGENTS.md) → [Current state](docs/STATE.md) → [Current handoff](docs/HANDOFF.md) → [Rolladice Work protocol](docs/11-ROLLADICE-WORK.md) |
+| Architecture reviewer | [Architecture](docs/02-ARCHITECTURE.md) → [Memory & data](docs/03-MEMORY-AND-DATA.md) → [Agents & skills](docs/04-AGENTS-AND-SKILLS.md) → [Evolution](docs/06-EVOLUTION.md) |
+| Trust / experience reviewer | [Trust & inspection](docs/05-TRUST-AND-INSPECTION.md) → [Acceptance](docs/09-ACCEPTANCE.md) → [Decisions](docs/10-DECISIONS.md) |
 
 ## Agreed product direction
 
@@ -30,4 +30,8 @@ The previous Quellight conversations are reported to live in an existing Supabas
 ## Current delivery
 
 The first deliverable is a verified foundation and a read-only source assessment. Future development cycles must produce runnable behavior and independent evidence. Read [HANDOFF](docs/HANDOFF.md) for the presently authorized work; do not interpret the long-term roadmap as blanket authorization.
+
+## Persistent development coordination
+
+The private **Rolladice Work** project `Quellight II` tracks Codex delegation, pinned standards, discussions, execution evidence and human review across sessions. The first AI ticket is **`II-001` — Cycle 0 read-only discovery**. Codex should check Work at session start, use its source-linked handoff and report through the ticket. Ticket creation does not launch a coding agent or grant new authority; see [Work protocol](docs/11-ROLLADICE-WORK.md). Numbered `docs/01-…` through `docs/11-…` files are ordered, stable design references; unnumbered `docs/STATE.md` and `docs/HANDOFF.md` remain the live operational entry points.
 

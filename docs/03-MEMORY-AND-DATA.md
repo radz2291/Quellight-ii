@@ -1,4 +1,4 @@
-# Memory and data — durable meaning without invented facts
+# 03 — Memory and data — durable meaning without invented facts
 
 **Status:** design contract. Target: ChatGPT-like useful personal continuity with stronger owner source inspection and correction; this is not a claim of current parity.
 
@@ -57,5 +57,5 @@ Inspect, correct, merge, dispute, export, pause remembering and request removal 
 
 ## Proof requirements
 
-See [Acceptance](ACCEPTANCE.md): cross-thread recall, exact source retrieval, temporal queries, contradiction handling, deliberate forgetting, restart/reindex and isolation tests. Data correctness and memory usefulness are both required.
+See [Acceptance](09-ACCEPTANCE.md): cross-thread recall, exact source retrieval, temporal queries, contradiction handling, deliberate forgetting, restart/reindex and isolation tests. Data correctness and memory usefulness are both required.
 

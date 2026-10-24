@@ -1,4 +1,4 @@
-# Product and architecture decisions
+# 10 — Product and architecture decisions
 
 This is an append-only record of material choices made in the 2026-10-24 product-design conversation. **Owner-directed** means the owner stated or explicitly accepted the direction; **design recommendation** means a proposed technical implementation still needs Cycle 0 proof. Preserve superseded records and link amendments rather than quietly rewriting history.
 
@@ -18,6 +18,8 @@ This is an append-only record of material choices made in the 2026-10-24 product
 | D-012 | Source-grounded low-risk curation may happen quietly; consequential actions and identity judgments face stricter review | Useful autonomy without assuming authority over user meaning | Owner delegated default policy; proposed for explicit tests |
 | D-013 | Changeability and scaling are first-class: unexpected mid-build requests must have a bounded extension path | Avoid rebuilding core as product understanding evolves | Owner-directed, hard acceptance requirement |
 | D-014 | New public GitHub repository `radz2291/Quellight-ii` is the product source-of-truth for specifications and stages | New local Codex agent must reconstruct context without this chat | Owner supplied repo and requested foundation push |
+| D-015 | Use private **Rolladice Work** project and persistent tickets/discussions to delegate Codex stages | Keep assignment, cross-session questions, execution, criteria and owner review visible outside a single chat; Work ticket does not itself run Codex or override repo authority | Owner-directed 2026-10-24; project `Quellight II`, first ticket `II-001` created; see [Work protocol](11-ROLLADICE-WORK.md) |
+| D-016 | Number stable design-reference filenames `01`–`11`, keep live `STATE`/`HANDOFF` unnumbered | Readable ordered context without breaking the location of live operational pointers | Owner-directed 2026-10-24; links/validation to be updated with rename |
 
 ## Technical recommendations requiring Cycle 0 verification
 
@@ -27,7 +29,7 @@ This is an append-only record of material choices made in the 2026-10-24 product
 - Next.js plus an established chat UI kit (e.g. assistant-ui) as candidates, with selection based on actual compatibility and experience proof.
 - Versioned hybrid data model: universal records/events/links/sources plus validated typed fields and controlled extensions.
 
-These are not statements that current package APIs, pricing or deployment settings have already been tested. See [Architecture](ARCHITECTURE.md) and [Stage 0 acceptance](ACCEPTANCE.md).
+These are not statements that current package APIs, pricing or deployment settings have already been tested. See [Architecture](02-ARCHITECTURE.md) and [Stage 0 acceptance](09-ACCEPTANCE.md).
 
 ## Facts not yet established
 
@@ -36,5 +38,5 @@ These are not statements that current package APIs, pricing or deployment settin
 - Final chat UI framework/library, stable runtime package versions and performance thresholds.
 - Any actual implementation, import, external deployment or working product proof.
 
-Future changes must record owner authority, superseded decision, affected contracts, migration effects and next test. See [Evolution](EVOLUTION.md).
+Future changes must record owner authority, superseded decision, affected contracts, migration effects and next test. See [Evolution](06-EVOLUTION.md).
 

@@ -1,4 +1,4 @@
-# Development cycles and gates
+# 08 — Development cycles and gates
 
 **Status:** roadmap accepted as a proposed sequence, **not** blanket authority to implement all cycles. The current authorization is in [HANDOFF](HANDOFF.md). Each stage must end with an observable result, verified negative cases, exact commit evidence and explicit owner handoff/acceptance.
 
@@ -12,7 +12,7 @@
 
 **Demo:** a fresh developer can read the reports and explain how a historical conversation would be preserved and recalled, how a job survives restart, and how a new unforeseen personal domain would be added. Show source-schema evidence and explicit uncertainties.
 
-**Pass:** C0-01 through C0-07 in [Acceptance](ACCEPTANCE.md); independent challenge on exact candidate. **Stop:** source access rights missing, destructive requirement, unresolved privacy/ownership, material product fork or inability to support required architecture under selected packages. Report HELD/BLOCKED honestly.
+**Pass:** C0-01 through C0-07 in [Acceptance](09-ACCEPTANCE.md); independent challenge on exact candidate. **Stop:** source access rights missing, destructive requirement, unresolved privacy/ownership, material product fork or inability to support required architecture under selected packages. Report HELD/BLOCKED honestly.
 
 ## Cycle 1 — Core foundation and vertical proof
 
@@ -60,5 +60,5 @@
 
 ## Stage operation
 
-One accountable stage manager owns integrated candidates, evidence and end-to-end repair. An independent fresh-context verifier challenges exact commits; no implementation change inherits an old verification verdict. Keep earlier failures and findings; do not silently mark incomplete acceptance checks PASS. Stops at each accepted boundary, not after every routine repair. See [AGENTS.md](../AGENTS.md), [STATE](STATE.md), [HANDOFF](HANDOFF.md).
+One accountable stage manager owns integrated candidates, evidence and end-to-end repair. An independent fresh-context verifier challenges exact commits; no implementation change inherits an old verification verdict. Keep earlier failures and findings; do not silently mark incomplete acceptance checks PASS. Stops at each accepted boundary, not after every routine repair. Rolladice Work carries ticket assignment, discussion and human review across agent sessions; ticket visibility never self-authorizes a future stage or starts a runner. See [AGENTS.md](../AGENTS.md), [STATE](STATE.md), [HANDOFF](HANDOFF.md), [Work protocol](11-ROLLADICE-WORK.md).
 

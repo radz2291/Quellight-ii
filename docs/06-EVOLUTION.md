@@ -1,4 +1,4 @@
-# Evolution and scalability contract
+# 06 — Evolution and scalability contract
 
 **Status:** hard product requirement. Changeability means accommodating unexpected mid-development requirements without repeatedly rebuilding the foundation; operational scalability matters too. No design is guaranteed future-proof.
 
@@ -30,10 +30,10 @@ Avoid entangling Companion conversation with database layout, vendor response en
 
 ## Mid-development change protocol
 
-1. Record the new owner's intent and whether it supersedes an earlier decision in [Decisions](DECISIONS.md).
+1. Record the new owner's intent and whether it supersedes an earlier decision in [Decisions](10-DECISIONS.md).
 2. Identify affected product behavior, data, contracts, permissions, tests and current stage.
 3. Prefer a small extension path; explain when a genuine new service/integration or wider change is needed.
-4. Amend [Architecture](ARCHITECTURE.md), relevant contracts, [Stages](STAGES.md), [Acceptance](ACCEPTANCE.md) and [Handoff](HANDOFF.md) together before changing code.
+4. Amend [Architecture](02-ARCHITECTURE.md), relevant contracts, [Stages](08-STAGES.md), [Acceptance](09-ACCEPTANCE.md) and [Handoff](HANDOFF.md) together before changing code.
 5. Implement with migration/rollback planning where data is touched; independently verify new and regression behavior.
 6. Preserve earlier candidates, failed evidence and the exact current verified SHA.
 
